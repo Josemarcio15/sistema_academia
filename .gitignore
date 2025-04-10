@@ -1,3 +1,5 @@
 .qtcreator/
 __pycache__/
 class_interface/__pycache__/
+PyAcademia.pyproject.user
+pages/__pycache__/
