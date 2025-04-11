@@ -23,13 +23,13 @@ class Ui_Home(object):
     def setupUi(self, Home):
         if not Home.objectName():
             Home.setObjectName(u"Home")
-        Home.setWindowModality(Qt.WindowModal)
+        Home.setWindowModality(Qt.WindowModality.WindowModal)
         Home.setEnabled(True)
         Home.resize(1119, 881)
         Home.setWindowTitle(u"SysMar")
         self.gridLayout_2 = QGridLayout(Home)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.gridLayout_2.setSizeConstraint(QLayout.SetNoConstraint)
+        self.gridLayout_2.setSizeConstraint(QLayout.SizeConstraint.SetNoConstraint)
         self.gridLayout_2.setContentsMargins(9, -1, -1, -1)
         self.button_bar_financeiro = QPushButton(Home)
         self.button_bar_financeiro.setObjectName(u"button_bar_financeiro")
@@ -95,18 +95,18 @@ class Ui_Home(object):
 
         self.gridLayout_3.addItem(self.verticalSpacer_4, 7, 0, 1, 1)
 
-        self.lineEdit_2 = QLineEdit(self.page_2)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.cadastro_endereco_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_endereco_lineEdit.setObjectName(u"cadastro_endereco_lineEdit")
 
-        self.gridLayout_3.addWidget(self.lineEdit_2, 6, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.cadastro_endereco_lineEdit, 6, 0, 1, 1)
 
         self.gridLayout_7 = QGridLayout()
         self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.lineEdit_7 = QLineEdit(self.page_2)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setMaximumSize(QSize(100, 16777215))
+        self.cadastro_nascimento_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_nascimento_lineEdit.setObjectName(u"cadastro_nascimento_lineEdit")
+        self.cadastro_nascimento_lineEdit.setMaximumSize(QSize(100, 16777215))
 
-        self.gridLayout_7.addWidget(self.lineEdit_7, 0, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.cadastro_nascimento_lineEdit, 0, 0, 1, 1)
 
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
@@ -119,10 +119,10 @@ class Ui_Home(object):
 
         self.gridLayout_3.addItem(self.verticalSpacer_3, 4, 0, 1, 1)
 
-        self.lineEdit_3 = QLineEdit(self.page_2)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.cadastro_cpf_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_cpf_lineEdit.setObjectName(u"cadastro_cpf_lineEdit")
 
-        self.gridLayout_3.addWidget(self.lineEdit_3, 3, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.cadastro_cpf_lineEdit, 3, 1, 1, 1)
 
         self.label_11 = QLabel(self.page_2)
         self.label_11.setObjectName(u"label_11")
@@ -134,15 +134,15 @@ class Ui_Home(object):
         self.label_2.setMinimumSize(QSize(85, 113))
         self.label_2.setMaximumSize(QSize(85, 113))
         self.label_2.setStyleSheet(u"background-color: rgb(153, 193, 241);")
-        self.label_2.setTextFormat(Qt.AutoText)
-        self.label_2.setAlignment(Qt.AlignCenter)
+        self.label_2.setTextFormat(Qt.TextFormat.AutoText)
+        self.label_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.gridLayout_3.addWidget(self.label_2, 1, 0, 1, 1)
 
-        self.lineEdit_5 = QLineEdit(self.page_2)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.cadastro_bairro_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_bairro_lineEdit.setObjectName(u"cadastro_bairro_lineEdit")
 
-        self.gridLayout_3.addWidget(self.lineEdit_5, 6, 2, 1, 1)
+        self.gridLayout_3.addWidget(self.cadastro_bairro_lineEdit, 6, 2, 1, 1)
 
         self.label_12 = QLabel(self.page_2)
         self.label_12.setObjectName(u"label_12")
@@ -153,24 +153,24 @@ class Ui_Home(object):
 
         self.gridLayout_3.addItem(self.verticalSpacer_2, 14, 0, 1, 1)
 
-        self.comboBox = QComboBox(self.page_2)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setMaximumSize(QSize(110, 16777215))
+        self.cadastro_sexo_comboBox = QComboBox(self.page_2)
+        self.cadastro_sexo_comboBox.addItem("")
+        self.cadastro_sexo_comboBox.addItem("")
+        self.cadastro_sexo_comboBox.addItem("")
+        self.cadastro_sexo_comboBox.addItem("")
+        self.cadastro_sexo_comboBox.setObjectName(u"cadastro_sexo_comboBox")
+        self.cadastro_sexo_comboBox.setMaximumSize(QSize(110, 16777215))
 
-        self.gridLayout_3.addWidget(self.comboBox, 3, 2, 1, 1)
+        self.gridLayout_3.addWidget(self.cadastro_sexo_comboBox, 3, 2, 1, 1)
 
         self.verticalSpacer_5 = QSpacerItem(20, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
 
         self.gridLayout_3.addItem(self.verticalSpacer_5, 11, 1, 1, 1)
 
-        self.lineEdit_9 = QLineEdit(self.page_2)
-        self.lineEdit_9.setObjectName(u"lineEdit_9")
+        self.cadastro_telefone_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_telefone_lineEdit.setObjectName(u"cadastro_telefone_lineEdit")
 
-        self.gridLayout_3.addWidget(self.lineEdit_9, 9, 2, 1, 1)
+        self.gridLayout_3.addWidget(self.cadastro_telefone_lineEdit, 9, 2, 1, 1)
 
         self.label_7 = QLabel(self.page_2)
         self.label_7.setObjectName(u"label_7")
@@ -182,10 +182,10 @@ class Ui_Home(object):
 
         self.gridLayout_3.addWidget(self.label_4, 5, 0, 1, 1)
 
-        self.lineEdit_8 = QLineEdit(self.page_2)
-        self.lineEdit_8.setObjectName(u"lineEdit_8")
+        self.cadastro_email_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_email_lineEdit.setObjectName(u"cadastro_email_lineEdit")
 
-        self.gridLayout_3.addWidget(self.lineEdit_8, 9, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.cadastro_email_lineEdit, 9, 1, 1, 1)
 
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
@@ -193,16 +193,16 @@ class Ui_Home(object):
 
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.lineEdit_4 = QLineEdit(self.page_2)
-        self.lineEdit_4.setObjectName(u"lineEdit_4")
-        self.lineEdit_4.setMaximumSize(QSize(60, 16777215))
+        self.cadastro_numero_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_numero_lineEdit.setObjectName(u"cadastro_numero_lineEdit")
+        self.cadastro_numero_lineEdit.setMaximumSize(QSize(60, 16777215))
 
-        self.gridLayout.addWidget(self.lineEdit_4, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.cadastro_numero_lineEdit, 0, 0, 1, 1)
 
-        self.lineEdit_6 = QLineEdit(self.page_2)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.cadastro_complemento_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_complemento_lineEdit.setObjectName(u"cadastro_complemento_lineEdit")
 
-        self.gridLayout.addWidget(self.lineEdit_6, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.cadastro_complemento_lineEdit, 0, 1, 1, 1)
 
 
         self.gridLayout_3.addLayout(self.gridLayout, 6, 1, 1, 1)
@@ -241,10 +241,10 @@ class Ui_Home(object):
 
         self.gridLayout_3.addWidget(self.label_5, 5, 2, 1, 1)
 
-        self.lineEdit = QLineEdit(self.page_2)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.cadastro_nome_lineEdit = QLineEdit(self.page_2)
+        self.cadastro_nome_lineEdit.setObjectName(u"cadastro_nome_lineEdit")
 
-        self.gridLayout_3.addWidget(self.lineEdit, 3, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.cadastro_nome_lineEdit, 3, 0, 1, 1)
 
         self.button_cadastrar_cliente = QPushButton(self.page_2)
         self.button_cadastrar_cliente.setObjectName(u"button_cadastrar_cliente")
@@ -423,29 +423,30 @@ class Ui_Home(object):
         self.button_bar_configuracoes.setText(QCoreApplication.translate("Home", u"Configura\u00e7\u00f5es", None))
         self.button_bar_cadastrar.setText(QCoreApplication.translate("Home", u"Cadastrar Cliente", None))
         self.pushButton.setText(QCoreApplication.translate("Home", u"1", None))
-        self.lineEdit_2.setText(QCoreApplication.translate("Home", u"Rua Oscar Pereira de Briro", None))
-        self.lineEdit_7.setText(QCoreApplication.translate("Home", u"dd/mm/aaaa", None))
-        self.lineEdit_3.setText(QCoreApplication.translate("Home", u"095.813.439-11", None))
+        self.cadastro_endereco_lineEdit.setText(QCoreApplication.translate("Home", u"Rua Oscar Pereira de Briro", None))
+        self.cadastro_nascimento_lineEdit.setText(QCoreApplication.translate("Home", u"12/12/1993", None))
+        self.cadastro_cpf_lineEdit.setText(QCoreApplication.translate("Home", u"888.888.888-11", None))
         self.label_11.setText(QCoreApplication.translate("Home", u"Email:", None))
         self.label_2.setText(QCoreApplication.translate("Home", u"Foto", None))
-        self.lineEdit_5.setText(QCoreApplication.translate("Home", u"S\u00e3o Bento", None))
+        self.cadastro_bairro_lineEdit.setText(QCoreApplication.translate("Home", u"S\u00e3o Bento", None))
         self.label_12.setText(QCoreApplication.translate("Home", u"Telefone:", None))
-        self.comboBox.setItemText(0, "")
-        self.comboBox.setItemText(1, QCoreApplication.translate("Home", u"Masculino", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("Home", u"Feminino", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("Home", u"Outro", None))
+        self.cadastro_sexo_comboBox.setItemText(0, "")
+        self.cadastro_sexo_comboBox.setItemText(1, QCoreApplication.translate("Home", u"Masculino", None))
+        self.cadastro_sexo_comboBox.setItemText(2, QCoreApplication.translate("Home", u"Feminino", None))
+        self.cadastro_sexo_comboBox.setItemText(3, QCoreApplication.translate("Home", u"Outro", None))
 
-        self.lineEdit_9.setText(QCoreApplication.translate("Home", u"(67) 9 ", None))
+        self.cadastro_telefone_lineEdit.setText(QCoreApplication.translate("Home", u"(67) 9 96995588", None))
         self.label_7.setText(QCoreApplication.translate("Home", u"CPF:", None))
         self.label_4.setText(QCoreApplication.translate("Home", u"Endere\u00e7o:", None))
-        self.lineEdit_8.setText(QCoreApplication.translate("Home", u"josemarcio0araujo@gmail.com", None))
-        self.lineEdit_4.setText(QCoreApplication.translate("Home", u"123456", None))
+        self.cadastro_email_lineEdit.setText(QCoreApplication.translate("Home", u"email.escolhido@gmail.com", None))
+        self.cadastro_numero_lineEdit.setText(QCoreApplication.translate("Home", u"223", None))
+        self.cadastro_complemento_lineEdit.setText(QCoreApplication.translate("Home", u"Casa", None))
         self.label.setText(QCoreApplication.translate("Home", u"Cadastro de clientes:", None))
         self.label_8.setText(QCoreApplication.translate("Home", u"Sexo:", None))
         self.label_6.setText(QCoreApplication.translate("Home", u"Numero:", None))
         self.label_9.setText(QCoreApplication.translate("Home", u"Complemento:", None))
         self.label_5.setText(QCoreApplication.translate("Home", u"Bairro:", None))
-        self.lineEdit.setText(QCoreApplication.translate("Home", u"Eliane Aparecida Rodrigueiro Ramos de Abreu", None))
+        self.cadastro_nome_lineEdit.setText(QCoreApplication.translate("Home", u"Andre da Silva Duarte", None))
         self.button_cadastrar_cliente.setText(QCoreApplication.translate("Home", u"Cadastrar Cliente", None))
         self.label_3.setText(QCoreApplication.translate("Home", u"Nome:", None))
         self.label_10.setText(QCoreApplication.translate("Home", u"Data de Nascimento:", None))
