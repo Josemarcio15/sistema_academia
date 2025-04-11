@@ -1,0 +1,2 @@
+class Configuracao:
+    print()

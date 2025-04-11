@@ -8,8 +8,6 @@ class Sidebar(QWidget):
         self.ui = Ui_Home()
         self.ui.setupUi(self)
 
-
-        # Conectando botões
         self.ui.button_bar_inicio.clicked.connect(lambda: self.carregar_pagina(0))
         self.ui.button_bar_cadastrar.clicked.connect(lambda: self.carregar_pagina(1))
         self.ui.button_bar_financeiro.clicked.connect(lambda: self.carregar_pagina(2))
