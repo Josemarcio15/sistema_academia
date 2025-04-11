@@ -246,17 +246,17 @@ class Ui_Home(object):
 
         self.gridLayout_3.addWidget(self.lineEdit, 3, 0, 1, 1)
 
-        self.pushButton_2 = QPushButton(self.page_2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.button_cadastrar_cliente = QPushButton(self.page_2)
+        self.button_cadastrar_cliente.setObjectName(u"button_cadastrar_cliente")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_2.setSizePolicy(sizePolicy1)
-        self.pushButton_2.setMinimumSize(QSize(0, 40))
-        self.pushButton_2.setMaximumSize(QSize(200, 40))
+        sizePolicy1.setHeightForWidth(self.button_cadastrar_cliente.sizePolicy().hasHeightForWidth())
+        self.button_cadastrar_cliente.setSizePolicy(sizePolicy1)
+        self.button_cadastrar_cliente.setMinimumSize(QSize(0, 40))
+        self.button_cadastrar_cliente.setMaximumSize(QSize(200, 40))
 
-        self.gridLayout_3.addWidget(self.pushButton_2, 12, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.button_cadastrar_cliente, 12, 1, 1, 1)
 
         self.label_3 = QLabel(self.page_2)
         self.label_3.setObjectName(u"label_3")
@@ -411,7 +411,7 @@ class Ui_Home(object):
 
         self.retranslateUi(Home)
 
-        self.stacked_principal.setCurrentIndex(2)
+        self.stacked_principal.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Home)
@@ -446,7 +446,7 @@ class Ui_Home(object):
         self.label_9.setText(QCoreApplication.translate("Home", u"Complemento:", None))
         self.label_5.setText(QCoreApplication.translate("Home", u"Bairro:", None))
         self.lineEdit.setText(QCoreApplication.translate("Home", u"Eliane Aparecida Rodrigueiro Ramos de Abreu", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Home", u"Cadastrar Cliente", None))
+        self.button_cadastrar_cliente.setText(QCoreApplication.translate("Home", u"Cadastrar Cliente", None))
         self.label_3.setText(QCoreApplication.translate("Home", u"Nome:", None))
         self.label_10.setText(QCoreApplication.translate("Home", u"Data de Nascimento:", None))
         self.pushButton_3.setText(QCoreApplication.translate("Home", u"Limpar", None))
