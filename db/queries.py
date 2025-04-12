@@ -11,13 +11,13 @@ def obter_clientes():
         return clientes
     return []
 
-def adicionar_cliente(nome, cpf,sexo, endereco, numero, bairro, data_nascimento, email, telefone):
+def adicionar_cliente(nome, cpf,sexo, endereco, numero, bairro, data_nascimento, email, telefone, complemento):
     conexao = criar_conexao()
     if conexao:
         cursor = conexao.cursor()
         cursor.execute(
-            "INSERT INTO clientes (nome, cpf, sexo, endereco, numero, bairro, data_nascimento, email, telefone) " \
-            "VALUES (%s, %s,%s,%s,%s,%s,%s,%s,%s)",
+            "INSERT INTO clientes (nome, cpf, sexo, endereco, numero, bairro, data_nascimento, email, telefone, complemento) " \
+            "VALUES (%s, %s,%s,%s,%s,%s,%s,%s,%s,%s)",
             (nome, 
             cpf, 
             sexo, 
@@ -26,7 +26,8 @@ def adicionar_cliente(nome, cpf,sexo, endereco, numero, bairro, data_nascimento,
             bairro, 
             data_nascimento, 
             email, 
-            telefone
+            telefone,
+            complemento
             )
         )
         conexao.commit()

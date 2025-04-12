@@ -1,6 +1,6 @@
 from queries import adicionar_cliente
 class EnviarBanco:
-    def __init__(self, nome, cpf, sexo, endereco, numero, bairro, data_nascimento, email, telefone):
+    def __init__(self, nome, cpf, sexo, endereco, numero, bairro, data_nascimento, email, telefone, complemento=""):
         self.nome = nome
         self.cpf = cpf
         self.sexo = sexo
@@ -10,7 +10,8 @@ class EnviarBanco:
         self.data_nascimento = data_nascimento
         self.email = email
         self.telefone = telefone
-
+        self.complemento = complemento
+        
     def salvar_no_banco(self):
         adicionar_cliente(self.nome, 
                           self.cpf, 
@@ -20,7 +21,7 @@ class EnviarBanco:
                           self.bairro, 
                           self.data_nascimento, 
                           self.email, 
-                          self.telefone
+                          self.telefone,
+                          self.complemento
                           )
-        
 
