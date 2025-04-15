@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QGridLayout, QLabel,
-    QLayout, QLineEdit, QListView, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QLabel, QLayout, QLineEdit, QListView,
+    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
+    QVBoxLayout, QWidget)
 
 class Ui_Home(object):
     def setupUi(self, Home):
@@ -27,57 +28,12 @@ class Ui_Home(object):
         Home.setEnabled(True)
         Home.resize(1119, 881)
         Home.setWindowTitle(u"SysMar")
+        Home.setStyleSheet(u"background-color: grey;")
         self.gridLayout_2 = QGridLayout(Home)
+        self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.gridLayout_2.setSizeConstraint(QLayout.SizeConstraint.SetNoConstraint)
-        self.gridLayout_2.setContentsMargins(9, -1, -1, -1)
-        self.button_bar_financeiro = QPushButton(Home)
-        self.button_bar_financeiro.setObjectName(u"button_bar_financeiro")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.button_bar_financeiro.sizePolicy().hasHeightForWidth())
-        self.button_bar_financeiro.setSizePolicy(sizePolicy)
-        self.button_bar_financeiro.setMinimumSize(QSize(0, 0))
-        self.button_bar_financeiro.setMaximumSize(QSize(500, 100))
-        self.button_bar_financeiro.setSizeIncrement(QSize(0, 0))
-
-        self.gridLayout_2.addWidget(self.button_bar_financeiro, 2, 0, 1, 1)
-
-        self.button_bar_inicio = QPushButton(Home)
-        self.button_bar_inicio.setObjectName(u"button_bar_inicio")
-        sizePolicy.setHeightForWidth(self.button_bar_inicio.sizePolicy().hasHeightForWidth())
-        self.button_bar_inicio.setSizePolicy(sizePolicy)
-        self.button_bar_inicio.setMinimumSize(QSize(0, 0))
-        self.button_bar_inicio.setMaximumSize(QSize(500, 100))
-        self.button_bar_inicio.setSizeIncrement(QSize(0, 0))
-
-        self.gridLayout_2.addWidget(self.button_bar_inicio, 0, 0, 1, 1)
-
-        self.button_bar_configuracoes = QPushButton(Home)
-        self.button_bar_configuracoes.setObjectName(u"button_bar_configuracoes")
-        sizePolicy.setHeightForWidth(self.button_bar_configuracoes.sizePolicy().hasHeightForWidth())
-        self.button_bar_configuracoes.setSizePolicy(sizePolicy)
-        self.button_bar_configuracoes.setMinimumSize(QSize(0, 0))
-        self.button_bar_configuracoes.setMaximumSize(QSize(500, 100))
-        self.button_bar_configuracoes.setSizeIncrement(QSize(0, 0))
-
-        self.gridLayout_2.addWidget(self.button_bar_configuracoes, 3, 0, 1, 1)
-
-        self.button_bar_cadastrar = QPushButton(Home)
-        self.button_bar_cadastrar.setObjectName(u"button_bar_cadastrar")
-        sizePolicy.setHeightForWidth(self.button_bar_cadastrar.sizePolicy().hasHeightForWidth())
-        self.button_bar_cadastrar.setSizePolicy(sizePolicy)
-        self.button_bar_cadastrar.setMinimumSize(QSize(0, 0))
-        self.button_bar_cadastrar.setMaximumSize(QSize(500, 100))
-        self.button_bar_cadastrar.setSizeIncrement(QSize(0, 0))
-
-        self.gridLayout_2.addWidget(self.button_bar_cadastrar, 1, 0, 1, 1)
-
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_2.addItem(self.verticalSpacer, 4, 0, 1, 1)
-
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 1)
         self.stacked_principal = QStackedWidget(Home)
         self.stacked_principal.setObjectName(u"stacked_principal")
         self.page = QWidget()
@@ -96,6 +52,7 @@ class Ui_Home(object):
 
         self.cadastro_endereco_lineEdit = QLineEdit(self.page_2)
         self.cadastro_endereco_lineEdit.setObjectName(u"cadastro_endereco_lineEdit")
+        self.cadastro_endereco_lineEdit.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.cadastro_endereco_lineEdit, 6, 0, 1, 1)
 
@@ -120,6 +77,7 @@ class Ui_Home(object):
 
         self.cadastro_cpf_lineEdit = QLineEdit(self.page_2)
         self.cadastro_cpf_lineEdit.setObjectName(u"cadastro_cpf_lineEdit")
+        self.cadastro_cpf_lineEdit.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.cadastro_cpf_lineEdit, 3, 1, 1, 1)
 
@@ -140,6 +98,7 @@ class Ui_Home(object):
 
         self.cadastro_bairro_lineEdit = QLineEdit(self.page_2)
         self.cadastro_bairro_lineEdit.setObjectName(u"cadastro_bairro_lineEdit")
+        self.cadastro_bairro_lineEdit.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.cadastro_bairro_lineEdit, 6, 2, 1, 1)
 
@@ -159,6 +118,7 @@ class Ui_Home(object):
         self.cadastro_sexo_comboBox.addItem("")
         self.cadastro_sexo_comboBox.setObjectName(u"cadastro_sexo_comboBox")
         self.cadastro_sexo_comboBox.setMaximumSize(QSize(110, 16777215))
+        self.cadastro_sexo_comboBox.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.cadastro_sexo_comboBox, 3, 2, 1, 1)
 
@@ -168,6 +128,7 @@ class Ui_Home(object):
 
         self.cadastro_telefone_lineEdit = QLineEdit(self.page_2)
         self.cadastro_telefone_lineEdit.setObjectName(u"cadastro_telefone_lineEdit")
+        self.cadastro_telefone_lineEdit.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.cadastro_telefone_lineEdit, 9, 2, 1, 1)
 
@@ -183,6 +144,7 @@ class Ui_Home(object):
 
         self.cadastro_email_lineEdit = QLineEdit(self.page_2)
         self.cadastro_email_lineEdit.setObjectName(u"cadastro_email_lineEdit")
+        self.cadastro_email_lineEdit.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.cadastro_email_lineEdit, 9, 1, 1, 1)
 
@@ -242,18 +204,20 @@ class Ui_Home(object):
 
         self.cadastro_nome_lineEdit = QLineEdit(self.page_2)
         self.cadastro_nome_lineEdit.setObjectName(u"cadastro_nome_lineEdit")
+        self.cadastro_nome_lineEdit.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.cadastro_nome_lineEdit, 3, 0, 1, 1)
 
         self.button_cadastrar_cliente = QPushButton(self.page_2)
         self.button_cadastrar_cliente.setObjectName(u"button_cadastrar_cliente")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.button_cadastrar_cliente.sizePolicy().hasHeightForWidth())
-        self.button_cadastrar_cliente.setSizePolicy(sizePolicy1)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.button_cadastrar_cliente.sizePolicy().hasHeightForWidth())
+        self.button_cadastrar_cliente.setSizePolicy(sizePolicy)
         self.button_cadastrar_cliente.setMinimumSize(QSize(0, 40))
         self.button_cadastrar_cliente.setMaximumSize(QSize(200, 40))
+        self.button_cadastrar_cliente.setStyleSheet(u"color: white;")
 
         self.gridLayout_3.addWidget(self.button_cadastrar_cliente, 12, 1, 1, 1)
 
@@ -271,6 +235,7 @@ class Ui_Home(object):
         self.pushButton_3.setObjectName(u"pushButton_3")
         self.pushButton_3.setMinimumSize(QSize(0, 40))
         self.pushButton_3.setMaximumSize(QSize(200, 16777215))
+        self.pushButton_3.setStyleSheet(u"background-color: rgb(192, 28, 40);")
 
         self.gridLayout_3.addWidget(self.pushButton_3, 13, 1, 1, 1)
 
@@ -285,11 +250,11 @@ class Ui_Home(object):
 
         self.label_14 = QLabel(self.page_3)
         self.label_14.setObjectName(u"label_14")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.label_14.sizePolicy().hasHeightForWidth())
-        self.label_14.setSizePolicy(sizePolicy2)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.label_14.sizePolicy().hasHeightForWidth())
+        self.label_14.setSizePolicy(sizePolicy1)
         self.label_14.setMinimumSize(QSize(100, 0))
         self.label_14.setFont(font)
 
@@ -322,11 +287,11 @@ class Ui_Home(object):
 
         self.lineEdit_11 = QLineEdit(self.page_3)
         self.lineEdit_11.setObjectName(u"lineEdit_11")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.lineEdit_11.sizePolicy().hasHeightForWidth())
-        self.lineEdit_11.setSizePolicy(sizePolicy3)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.lineEdit_11.sizePolicy().hasHeightForWidth())
+        self.lineEdit_11.setSizePolicy(sizePolicy2)
 
         self.gridLayout_9.addWidget(self.lineEdit_11, 0, 0, 1, 1)
 
@@ -344,11 +309,11 @@ class Ui_Home(object):
 
         self.label_16 = QLabel(self.page_3)
         self.label_16.setObjectName(u"label_16")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
-        self.label_16.setSizePolicy(sizePolicy4)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
+        self.label_16.setSizePolicy(sizePolicy3)
         self.label_16.setMaximumSize(QSize(16777215, 20))
 
         self.gridLayout_8.addWidget(self.label_16, 1, 0, 1, 1)
@@ -361,16 +326,16 @@ class Ui_Home(object):
 
         self.lineEdit_10 = QLineEdit(self.page_3)
         self.lineEdit_10.setObjectName(u"lineEdit_10")
-        sizePolicy3.setHeightForWidth(self.lineEdit_10.sizePolicy().hasHeightForWidth())
-        self.lineEdit_10.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.lineEdit_10.sizePolicy().hasHeightForWidth())
+        self.lineEdit_10.setSizePolicy(sizePolicy2)
         self.lineEdit_10.setMinimumSize(QSize(400, 0))
 
         self.gridLayout_10.addWidget(self.lineEdit_10, 0, 0, 1, 1)
 
         self.pushButton_5 = QPushButton(self.page_3)
         self.pushButton_5.setObjectName(u"pushButton_5")
-        sizePolicy3.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
-        self.pushButton_5.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
+        self.pushButton_5.setSizePolicy(sizePolicy2)
 
         self.gridLayout_10.addWidget(self.pushButton_5, 0, 1, 1, 1)
 
@@ -382,11 +347,11 @@ class Ui_Home(object):
         self.listView = QListView(self.page_3)
         self.listView.setObjectName(u"listView")
         self.listView.setEnabled(True)
-        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Ignored)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.listView.sizePolicy().hasHeightForWidth())
-        self.listView.setSizePolicy(sizePolicy5)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Ignored)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.listView.sizePolicy().hasHeightForWidth())
+        self.listView.setSizePolicy(sizePolicy4)
         self.listView.setMaximumSize(QSize(16777215, 200))
         self.listView.setSelectionRectVisible(False)
 
@@ -405,22 +370,104 @@ class Ui_Home(object):
 
         self.stacked_principal.addWidget(self.page_3)
 
-        self.gridLayout_2.addWidget(self.stacked_principal, 0, 1, 5, 1)
+        self.gridLayout_2.addWidget(self.stacked_principal, 0, 1, 6, 1)
+
+        self.frame = QFrame(Home)
+        self.frame.setObjectName(u"frame")
+        self.frame.setStyleSheet(u"background-color: rgb(94, 92, 100);")
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.gridLayout_4 = QGridLayout(self.frame)
+        self.gridLayout_4.setSpacing(0)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2.setSpacing(1)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setSizeConstraint(QLayout.SizeConstraint.SetDefaultConstraint)
+        self.verticalLayout_2.setContentsMargins(0, -1, -1, -1)
+        self.button_bar_inicio = QPushButton(self.frame)
+        self.button_bar_inicio.setObjectName(u"button_bar_inicio")
+        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.button_bar_inicio.sizePolicy().hasHeightForWidth())
+        self.button_bar_inicio.setSizePolicy(sizePolicy5)
+        self.button_bar_inicio.setMinimumSize(QSize(0, 0))
+        self.button_bar_inicio.setMaximumSize(QSize(500, 60))
+        self.button_bar_inicio.setSizeIncrement(QSize(0, 0))
+        self.button_bar_inicio.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+"border: none;\n"
+"color: white;")
+        self.button_bar_inicio.setCheckable(False)
+        self.button_bar_inicio.setChecked(False)
+        self.button_bar_inicio.setAutoRepeat(False)
+        self.button_bar_inicio.setAutoExclusive(False)
+        self.button_bar_inicio.setAutoDefault(False)
+        self.button_bar_inicio.setFlat(False)
+
+        self.verticalLayout_2.addWidget(self.button_bar_inicio)
+
+        self.button_bar_cadastrar = QPushButton(self.frame)
+        self.button_bar_cadastrar.setObjectName(u"button_bar_cadastrar")
+        sizePolicy5.setHeightForWidth(self.button_bar_cadastrar.sizePolicy().hasHeightForWidth())
+        self.button_bar_cadastrar.setSizePolicy(sizePolicy5)
+        self.button_bar_cadastrar.setMinimumSize(QSize(0, 0))
+        self.button_bar_cadastrar.setMaximumSize(QSize(500, 60))
+        self.button_bar_cadastrar.setSizeIncrement(QSize(0, 0))
+        self.button_bar_cadastrar.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+"border: none;\n"
+"color: white;")
+
+        self.verticalLayout_2.addWidget(self.button_bar_cadastrar)
+
+        self.button_bar_financeiro = QPushButton(self.frame)
+        self.button_bar_financeiro.setObjectName(u"button_bar_financeiro")
+        sizePolicy5.setHeightForWidth(self.button_bar_financeiro.sizePolicy().hasHeightForWidth())
+        self.button_bar_financeiro.setSizePolicy(sizePolicy5)
+        self.button_bar_financeiro.setMinimumSize(QSize(0, 0))
+        self.button_bar_financeiro.setMaximumSize(QSize(500, 60))
+        self.button_bar_financeiro.setSizeIncrement(QSize(0, 0))
+        self.button_bar_financeiro.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+"border: none;\n"
+"color: white;")
+
+        self.verticalLayout_2.addWidget(self.button_bar_financeiro)
+
+        self.button_bar_configuracoes = QPushButton(self.frame)
+        self.button_bar_configuracoes.setObjectName(u"button_bar_configuracoes")
+        sizePolicy5.setHeightForWidth(self.button_bar_configuracoes.sizePolicy().hasHeightForWidth())
+        self.button_bar_configuracoes.setSizePolicy(sizePolicy5)
+        self.button_bar_configuracoes.setMinimumSize(QSize(0, 0))
+        self.button_bar_configuracoes.setMaximumSize(QSize(500, 60))
+        self.button_bar_configuracoes.setSizeIncrement(QSize(0, 0))
+        self.button_bar_configuracoes.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+"border: none;\n"
+"color: white;")
+
+        self.verticalLayout_2.addWidget(self.button_bar_configuracoes)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_2.addItem(self.verticalSpacer)
+
+
+        self.gridLayout_4.addLayout(self.verticalLayout_2, 0, 0, 1, 1)
+
+
+        self.gridLayout_2.addWidget(self.frame, 0, 0, 1, 1)
 
 
         self.retranslateUi(Home)
 
-        self.stacked_principal.setCurrentIndex(0)
+        self.stacked_principal.setCurrentIndex(1)
+        self.button_bar_inicio.setDefault(False)
 
 
         QMetaObject.connectSlotsByName(Home)
     # setupUi
 
     def retranslateUi(self, Home):
-        self.button_bar_financeiro.setText(QCoreApplication.translate("Home", u"Financeiro", None))
-        self.button_bar_inicio.setText(QCoreApplication.translate("Home", u"Inicio", None))
-        self.button_bar_configuracoes.setText(QCoreApplication.translate("Home", u"Configura\u00e7\u00f5es", None))
-        self.button_bar_cadastrar.setText(QCoreApplication.translate("Home", u"Cadastrar Cliente", None))
         self.pushButton.setText(QCoreApplication.translate("Home", u"1", None))
         self.cadastro_endereco_lineEdit.setText(QCoreApplication.translate("Home", u"Rua Oscar Pereira de Briro", None))
         self.cadastro_nascimento_lineEdit.setText(QCoreApplication.translate("Home", u"12/12/1993", None))
@@ -458,6 +505,10 @@ class Ui_Home(object):
         self.pushButton_5.setText(QCoreApplication.translate("Home", u"Pesquisar", None))
         self.pushButton_6.setText(QCoreApplication.translate("Home", u"Limpar", None))
         self.label_15.setText(QCoreApplication.translate("Home", u"Nome:", None))
+        self.button_bar_inicio.setText(QCoreApplication.translate("Home", u"Inicio", None))
+        self.button_bar_cadastrar.setText(QCoreApplication.translate("Home", u"Cadastro", None))
+        self.button_bar_financeiro.setText(QCoreApplication.translate("Home", u"Financeiro", None))
+        self.button_bar_configuracoes.setText(QCoreApplication.translate("Home", u"Configura\u00e7\u00f5es", None))
         pass
     # retranslateUi
 
