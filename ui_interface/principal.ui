@@ -165,9 +165,6 @@
    </item>
    <item row="0" column="1" rowspan="5">
     <widget class="QStackedWidget" name="stacked_principal">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(97, 53, 131);</string>
-     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>

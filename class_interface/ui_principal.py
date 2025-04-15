@@ -80,7 +80,6 @@ class Ui_Home(object):
 
         self.stacked_principal = QStackedWidget(Home)
         self.stacked_principal.setObjectName(u"stacked_principal")
-        self.stacked_principal.setStyleSheet(u"background-color: rgb(97, 53, 131);")
         self.page = QWidget()
         self.page.setObjectName(u"page")
         self.pushButton = QPushButton(self.page)
@@ -411,7 +410,7 @@ class Ui_Home(object):
 
         self.retranslateUi(Home)
 
-        self.stacked_principal.setCurrentIndex(1)
+        self.stacked_principal.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Home)
