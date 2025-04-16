@@ -1,15 +1,17 @@
 from .db_connection import criar_conexao
 
-def obter_clientes():
+def obter_clientes_por_nome(nome):
     conexao = criar_conexao()
     if conexao:
         cursor = conexao.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM clientes")
+        # Aqui estamos filtrando por nome usando LIKE
+        cursor.execute("SELECT * FROM clientes WHERE nome LIKE %s", ('%' + nome + '%',))
         clientes = cursor.fetchall()
         cursor.close()
         conexao.close()
         return clientes
     return []
+
 
 def adicionar_cliente(nome, cpf,sexo, endereco, numero, bairro, data_nascimento, email, telefone, complemento):
     conexao = criar_conexao()

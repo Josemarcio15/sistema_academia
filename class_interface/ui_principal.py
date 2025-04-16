@@ -16,9 +16,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QLabel, QLayout, QLineEdit, QListView,
-    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
-    QVBoxLayout, QWidget)
+    QLabel, QLayout, QLineEdit, QPushButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QVBoxLayout,
+    QWidget)
 
 class Ui_Home(object):
     def setupUi(self, Home):
@@ -318,47 +318,34 @@ class Ui_Home(object):
 
         self.gridLayout_8.addWidget(self.label_16, 1, 0, 1, 1)
 
-        self.gridLayout_10 = QGridLayout()
-        self.gridLayout_10.setObjectName(u"gridLayout_10")
-        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.gridLayout_nome = QGridLayout()
+        self.gridLayout_nome.setObjectName(u"gridLayout_nome")
+        self.lineEdit_pesquisa_cliente = QLineEdit(self.page_3)
+        self.lineEdit_pesquisa_cliente.setObjectName(u"lineEdit_pesquisa_cliente")
+        sizePolicy2.setHeightForWidth(self.lineEdit_pesquisa_cliente.sizePolicy().hasHeightForWidth())
+        self.lineEdit_pesquisa_cliente.setSizePolicy(sizePolicy2)
+        self.lineEdit_pesquisa_cliente.setMinimumSize(QSize(400, 0))
 
-        self.gridLayout_10.addItem(self.horizontalSpacer_6, 0, 3, 1, 1)
-
-        self.lineEdit_10 = QLineEdit(self.page_3)
-        self.lineEdit_10.setObjectName(u"lineEdit_10")
-        sizePolicy2.setHeightForWidth(self.lineEdit_10.sizePolicy().hasHeightForWidth())
-        self.lineEdit_10.setSizePolicy(sizePolicy2)
-        self.lineEdit_10.setMinimumSize(QSize(400, 0))
-
-        self.gridLayout_10.addWidget(self.lineEdit_10, 0, 0, 1, 1)
+        self.gridLayout_nome.addWidget(self.lineEdit_pesquisa_cliente, 0, 0, 1, 1)
 
         self.pushButton_5 = QPushButton(self.page_3)
         self.pushButton_5.setObjectName(u"pushButton_5")
         sizePolicy2.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
         self.pushButton_5.setSizePolicy(sizePolicy2)
 
-        self.gridLayout_10.addWidget(self.pushButton_5, 0, 1, 1, 1)
+        self.gridLayout_nome.addWidget(self.pushButton_5, 0, 1, 1, 1)
+
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_nome.addItem(self.horizontalSpacer_6, 0, 3, 1, 1)
 
         self.pushButton_6 = QPushButton(self.page_3)
         self.pushButton_6.setObjectName(u"pushButton_6")
 
-        self.gridLayout_10.addWidget(self.pushButton_6, 0, 2, 1, 1)
-
-        self.listView = QListView(self.page_3)
-        self.listView.setObjectName(u"listView")
-        self.listView.setEnabled(True)
-        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Ignored)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.listView.sizePolicy().hasHeightForWidth())
-        self.listView.setSizePolicy(sizePolicy4)
-        self.listView.setMaximumSize(QSize(16777215, 200))
-        self.listView.setSelectionRectVisible(False)
-
-        self.gridLayout_10.addWidget(self.listView, 1, 0, 1, 2)
+        self.gridLayout_nome.addWidget(self.pushButton_6, 0, 2, 1, 1)
 
 
-        self.gridLayout_8.addLayout(self.gridLayout_10, 0, 1, 1, 1)
+        self.gridLayout_8.addLayout(self.gridLayout_nome, 0, 1, 1, 1)
 
         self.label_15 = QLabel(self.page_3)
         self.label_15.setObjectName(u"label_15")
@@ -388,15 +375,15 @@ class Ui_Home(object):
         self.verticalLayout_2.setContentsMargins(0, -1, -1, -1)
         self.button_bar_inicio = QPushButton(self.frame)
         self.button_bar_inicio.setObjectName(u"button_bar_inicio")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.button_bar_inicio.sizePolicy().hasHeightForWidth())
-        self.button_bar_inicio.setSizePolicy(sizePolicy5)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.button_bar_inicio.sizePolicy().hasHeightForWidth())
+        self.button_bar_inicio.setSizePolicy(sizePolicy4)
         self.button_bar_inicio.setMinimumSize(QSize(0, 0))
         self.button_bar_inicio.setMaximumSize(QSize(500, 60))
         self.button_bar_inicio.setSizeIncrement(QSize(0, 0))
-        self.button_bar_inicio.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+        self.button_bar_inicio.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
 "color: white;")
         self.button_bar_inicio.setCheckable(False)
@@ -410,12 +397,12 @@ class Ui_Home(object):
 
         self.button_bar_cadastrar = QPushButton(self.frame)
         self.button_bar_cadastrar.setObjectName(u"button_bar_cadastrar")
-        sizePolicy5.setHeightForWidth(self.button_bar_cadastrar.sizePolicy().hasHeightForWidth())
-        self.button_bar_cadastrar.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.button_bar_cadastrar.sizePolicy().hasHeightForWidth())
+        self.button_bar_cadastrar.setSizePolicy(sizePolicy4)
         self.button_bar_cadastrar.setMinimumSize(QSize(0, 0))
         self.button_bar_cadastrar.setMaximumSize(QSize(500, 60))
         self.button_bar_cadastrar.setSizeIncrement(QSize(0, 0))
-        self.button_bar_cadastrar.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+        self.button_bar_cadastrar.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
 "color: white;")
 
@@ -423,12 +410,12 @@ class Ui_Home(object):
 
         self.button_bar_financeiro = QPushButton(self.frame)
         self.button_bar_financeiro.setObjectName(u"button_bar_financeiro")
-        sizePolicy5.setHeightForWidth(self.button_bar_financeiro.sizePolicy().hasHeightForWidth())
-        self.button_bar_financeiro.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.button_bar_financeiro.sizePolicy().hasHeightForWidth())
+        self.button_bar_financeiro.setSizePolicy(sizePolicy4)
         self.button_bar_financeiro.setMinimumSize(QSize(0, 0))
         self.button_bar_financeiro.setMaximumSize(QSize(500, 60))
         self.button_bar_financeiro.setSizeIncrement(QSize(0, 0))
-        self.button_bar_financeiro.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+        self.button_bar_financeiro.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
 "color: white;")
 
@@ -436,12 +423,12 @@ class Ui_Home(object):
 
         self.button_bar_configuracoes = QPushButton(self.frame)
         self.button_bar_configuracoes.setObjectName(u"button_bar_configuracoes")
-        sizePolicy5.setHeightForWidth(self.button_bar_configuracoes.sizePolicy().hasHeightForWidth())
-        self.button_bar_configuracoes.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.button_bar_configuracoes.sizePolicy().hasHeightForWidth())
+        self.button_bar_configuracoes.setSizePolicy(sizePolicy4)
         self.button_bar_configuracoes.setMinimumSize(QSize(0, 0))
         self.button_bar_configuracoes.setMaximumSize(QSize(500, 60))
         self.button_bar_configuracoes.setSizeIncrement(QSize(0, 0))
-        self.button_bar_configuracoes.setStyleSheet(u"background-color: rgb(119, 118, 123);\n"
+        self.button_bar_configuracoes.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
 "color: white;")
 
@@ -460,7 +447,7 @@ class Ui_Home(object):
 
         self.retranslateUi(Home)
 
-        self.stacked_principal.setCurrentIndex(1)
+        self.stacked_principal.setCurrentIndex(2)
         self.button_bar_inicio.setDefault(False)
 
 

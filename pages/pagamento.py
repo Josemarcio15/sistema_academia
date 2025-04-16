@@ -1,2 +1,0 @@
-class Pagamento:
-    print()
