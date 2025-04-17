@@ -26,7 +26,7 @@ class Ui_Home(object):
             Home.setObjectName(u"Home")
         Home.setWindowModality(Qt.WindowModality.WindowModal)
         Home.setEnabled(True)
-        Home.resize(1119, 881)
+        Home.resize(1121, 881)
         Home.setWindowTitle(u"SysMar")
         Home.setStyleSheet(u"background-color: grey;")
         self.gridLayout_2 = QGridLayout(Home)
@@ -328,12 +328,12 @@ class Ui_Home(object):
 
         self.gridLayout_nome.addWidget(self.lineEdit_pesquisa_cliente, 0, 0, 1, 1)
 
-        self.pushButton_5 = QPushButton(self.page_3)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        sizePolicy2.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
-        self.pushButton_5.setSizePolicy(sizePolicy2)
+        self.button_financeiro_pesquisar = QPushButton(self.page_3)
+        self.button_financeiro_pesquisar.setObjectName(u"button_financeiro_pesquisar")
+        sizePolicy2.setHeightForWidth(self.button_financeiro_pesquisar.sizePolicy().hasHeightForWidth())
+        self.button_financeiro_pesquisar.setSizePolicy(sizePolicy2)
 
-        self.gridLayout_nome.addWidget(self.pushButton_5, 0, 1, 1, 1)
+        self.gridLayout_nome.addWidget(self.button_financeiro_pesquisar, 0, 1, 1, 1)
 
         self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
@@ -447,7 +447,7 @@ class Ui_Home(object):
 
         self.retranslateUi(Home)
 
-        self.stacked_principal.setCurrentIndex(2)
+        self.stacked_principal.setCurrentIndex(1)
         self.button_bar_inicio.setDefault(False)
 
 
@@ -489,7 +489,7 @@ class Ui_Home(object):
         self.pushButton_4.setText(QCoreApplication.translate("Home", u"Pesquisar", None))
         self.pushButton_7.setText(QCoreApplication.translate("Home", u"Limpar", None))
         self.label_16.setText(QCoreApplication.translate("Home", u"Matricula:", None))
-        self.pushButton_5.setText(QCoreApplication.translate("Home", u"Pesquisar", None))
+        self.button_financeiro_pesquisar.setText(QCoreApplication.translate("Home", u"Pesquisar", None))
         self.pushButton_6.setText(QCoreApplication.translate("Home", u"Limpar", None))
         self.label_15.setText(QCoreApplication.translate("Home", u"Nome:", None))
         self.button_bar_inicio.setText(QCoreApplication.translate("Home", u"Inicio", None))
