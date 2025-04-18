@@ -419,12 +419,12 @@ class Ui_Home(object):
 
         self.gridLayout_9.addWidget(self.pushButton_4, 0, 1, 1, 1)
 
-        self.lineEdit_11 = QLineEdit(self.page_3)
-        self.lineEdit_11.setObjectName(u"lineEdit_11")
-        sizePolicy4.setHeightForWidth(self.lineEdit_11.sizePolicy().hasHeightForWidth())
-        self.lineEdit_11.setSizePolicy(sizePolicy4)
+        self.lineEdit_pesquisa_id = QLineEdit(self.page_3)
+        self.lineEdit_pesquisa_id.setObjectName(u"lineEdit_pesquisa_id")
+        sizePolicy4.setHeightForWidth(self.lineEdit_pesquisa_id.sizePolicy().hasHeightForWidth())
+        self.lineEdit_pesquisa_id.setSizePolicy(sizePolicy4)
 
-        self.gridLayout_9.addWidget(self.lineEdit_11, 0, 0, 1, 1)
+        self.gridLayout_9.addWidget(self.lineEdit_pesquisa_id, 0, 0, 1, 1)
 
 
         self.gridLayout_8.addLayout(self.gridLayout_9, 1, 1, 1, 1)
@@ -467,7 +467,7 @@ class Ui_Home(object):
         self.retranslateUi(Home)
 
         self.button_bar_inicio.setDefault(False)
-        self.stacked_principal.setCurrentIndex(0)
+        self.stacked_principal.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Home)

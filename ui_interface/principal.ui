@@ -265,7 +265,7 @@ color: white;</string>
    <item row="0" column="1" rowspan="6">
     <widget class="QStackedWidget" name="stacked_principal">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QPushButton" name="pushButton">
@@ -852,7 +852,7 @@ color: white;</string>
             </widget>
            </item>
            <item row="0" column="0">
-            <widget class="QLineEdit" name="lineEdit_11">
+            <widget class="QLineEdit" name="lineEdit_pesquisa_id">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
