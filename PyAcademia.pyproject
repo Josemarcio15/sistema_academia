@@ -1,10 +1,15 @@
 {
     "files": [
+        "class_interface/ui_login.py",
+        "class_interface/ui_principal.py",
         "widget.py",
-        "interface/form.ui",
-        "interface/home.ui",
-        "class_interface/ui_home.py",
-        "class_interface/ui_form.py",
-        "pages/home.py"
+        "ui_interface/login.ui",
+        "ui_interface/principal.ui",
+        "pages/home.py",
+        "db/db_config.py",
+        "db/db_connection.py",
+        "db/models.py",
+        "db/queries.py"
+
     ]
 }
