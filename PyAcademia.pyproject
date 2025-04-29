@@ -6,10 +6,15 @@
         "ui_interface/login.ui",
         "ui_interface/principal.ui",
         "pages/home.py",
+        "pages/cadastro_clientes.py",
+        "pages/configuracao.py",
+        "pages/financeiro.py",
         "db/db_config.py",
         "db/db_connection.py",
         "db/models.py",
-        "db/queries.py"
-
+        "db/queries.py",
+        ".env",
+        "shared/sidebar.py",
+        "criar_db.py"
     ]
 }

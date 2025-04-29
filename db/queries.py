@@ -21,7 +21,22 @@ def obter_id_cliente(numero):
         conexao.close()
         return clientes
     return []
+def cpf_existe(cpf): #verifica se o cpf não é duplicado
 
+    conexao = criar_conexao()
+
+    if conexao:
+        try:
+            cursor = conexao.cursor()
+            cursor.execute("SELECT COUNT(*) FROM clientes WHERE cpf = %s", (cpf,))
+            result = cursor.fetchone()
+            cursor.close()
+            conexao.close()
+            return result[0] > 0
+        except Exception as e:
+            print(f"Erro ao verificar CPF no banco de dados: {e}")
+            return False
+    return False
 
 def adicionar_cliente(nome, cpf,sexo, endereco, numero, bairro, data_nascimento, email, telefone, complemento):
     conexao = criar_conexao()

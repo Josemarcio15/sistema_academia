@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QPushButton, QLineEdit, QComboBox, QMessageBox
 from db.models import EnviarBanco
+from db.queries import cpf_existe
 import re
 
 class CadastroClientes:
@@ -26,7 +27,7 @@ class CadastroClientes:
         
         nome = self.nome.text()
         cpf = self.cpf.text()
-        sexo = self.sexo.currentText()
+        sexo = self.sexo.currentText()[0]
         endereco = self.endereco.text()
         numero = self.numero.text()
         bairro = self.bairro.text()
@@ -56,9 +57,12 @@ class CadastroClientes:
             self.msgbox_erro("Nome não pode ser vazio.")
             return False
         if cpf is None or not self.validar_cpf(cpf):
+            if cpf_existe(cpf):
+                self.msgbox_erro("CPF já existe")
+                return False
             self.msgbox_erro("Formato do CPF invalido")
             return False
-        if sexo is None or sexo.strip() == "":
+        if sexo is None or sexo.strip() == "" or sexo.strip() == "S":
             self.msgbox_erro("Campo sexo não pode ser vazio.")
             return False
         if endereco is None or endereco.strip() == "":
@@ -98,7 +102,9 @@ class CadastroClientes:
             return False
 
     def validar_cpf(self, cpf):
-        return bool(re.match(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$', cpf))
+        if not cpf_existe(cpf):  # Verifica se o CPF não existe no banco
+            return bool(re.match(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$', cpf))
+        return False  # Retorna False se o CPF já existir no banco
 
     def validar_telefone(self, telefone):
         return bool(re.match(r'^\(\d{2}\) \d \d{4}-\d{4}$', telefone))
