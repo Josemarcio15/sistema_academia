@@ -1,6 +1,6 @@
 from PySide6.QtCore import QStringListModel, Qt
 from PySide6.QtWidgets import QLineEdit, QCompleter, QPushButton
-from db.queries import obter_clientes_por_nome
+from db.queries import obter_clientes_por_nome, atualizar_cliente
 from datetime import datetime
 
 class Aluno:
@@ -61,9 +61,9 @@ class Aluno:
                 aluno["sexo"]
             )
 
-    def texto_perfil_aluno(self, matricula, nome, cpf, data_nascimento, email, telefone, endereco,  bairro, numero, complemento, sexo):
+    def texto_perfil_aluno(self, matricula, nome, cpf, data_nascimento, email, telefone, endereco, bairro, numero, complemento, sexo):
         data_formatada = datetime.strptime(str(data_nascimento), "%Y-%m-%d").strftime("%d/%m/%Y")
-        
+
         self.matricula.setText(str(matricula))
         self.nome.setText(nome)
         self.cpf.setText(cpf)
@@ -77,5 +77,21 @@ class Aluno:
         self.sexo.setText(sexo)
 
     def editar_aluno(self):
-        novocpf = self.cpf.text()
-        print("cpf novo = ", novocpf)
+        try:
+            id_cliente = int(self.matricula.text())
+            campos = {
+                "nome": self.nome.text(),
+                "cpf": self.cpf.text(),
+                "data_nascimento": datetime.strptime(self.data_nascimento.text(), "%d/%m/%Y").strftime("%Y-%m-%d"),
+                "email": self.email.text(),
+                "telefone": self.telefone.text(),
+                "endereco": self.endereco.text(),
+                "bairro": self.bairro.text(),
+                "numero": self.numero.text(),
+                "complemento": self.complemento.text(),
+                "sexo": self.sexo.text()
+            }
+            sucesso = atualizar_cliente(id_cliente, campos)
+            print("Atualização realizada com sucesso" if sucesso else "Falha na atualização")
+        except Exception as e:
+            print(f"Erro ao editar aluno: {e}")

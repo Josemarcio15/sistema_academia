@@ -60,3 +60,28 @@ def adicionar_cliente(nome, cpf,sexo, endereco, numero, bairro, data_nascimento,
         conexao.commit()
         cursor.close()
         conexao.close()
+
+def atualizar_cliente(id_cliente, campos):
+    if not campos:
+        return False  # nada a atualizar
+
+    conexao = criar_conexao()
+    if conexao:
+        cursor = conexao.cursor()
+        try:
+            colunas = ", ".join([f"{col} = %s" for col in campos])
+            valores = list(campos.values())
+            valores.append(id_cliente)
+
+            sql = f"UPDATE clientes SET {colunas} WHERE id = %s"
+            cursor.execute(sql, valores)
+            conexao.commit()
+            return True
+        except Exception as e:
+            print(f"Erro ao atualizar cliente: {e}")
+            return False
+        finally:
+            cursor.close()
+            conexao.close()
+    return False
+

@@ -17,6 +17,7 @@
         "shared/sidebar.py",
         "criar_db.py",
         "README.md",
-        ".gitignore"
+        ".gitignore",
+        "shared/validar_dados.py"
     ]
 }
