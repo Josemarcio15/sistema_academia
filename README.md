@@ -1,12 +1,12 @@
 # Projeto de gestão de academia
-## requerimentos:
+## requeriments:
     pip install pyside6
     pip install python-dotenv
     pip install mysql-connector-python
     sudo apt install mysql-server
 
     criar um .env com seguintes variaveis
-        DB_USER=usuariodomysql
-        DB_PASSWORD=senhadomysql
-        DB_HOST=localhost
-        DB_NAME=nomedobanco
+        DB_USER = "root"
+        DB_PASSWORD = "Amagedom12"
+        DB_HOST = "localhost"
+        DB_NAME = "sys_db"
