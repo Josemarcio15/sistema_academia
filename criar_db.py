@@ -4,7 +4,7 @@ import mysql.connector
 DB_USER = "root"
 DB_PASSWORD = "Amagedom12"
 DB_HOST = "localhost"
-DB_NAME = "sys_mar"
+DB_NAME = "sys_db"
 
 def criar_conexao():
     """

@@ -3,7 +3,8 @@
     pip install pyside6
     pip install python-dotenv
     pip install mysql-connector-python
-    mysql
+    sudo apt install mysql-server
+
     criar um .env com seguintes variaveis
         DB_USER=usuariodomysql
         DB_PASSWORD=senhadomysql

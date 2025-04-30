@@ -18,7 +18,6 @@ class Widget(QWidget):
         self.credencial(id_admin)
 
     def credencial(self, id_admin):
-        print("acesso permitido")
         self.sidebar = Sidebar()
         self.sidebar.show()
         self.close()

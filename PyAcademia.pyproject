@@ -7,7 +7,7 @@
         "ui_interface/principal.ui",
         "pages/home.py",
         "pages/cadastro_clientes.py",
-        "pages/configuracao.py",
+        "pages/aluno.py",
         "pages/financeiro.py",
         "db/db_config.py",
         "db/db_connection.py",
@@ -15,6 +15,8 @@
         "db/queries.py",
         ".env",
         "shared/sidebar.py",
-        "criar_db.py"
+        "criar_db.py",
+        "README.md",
+        ".gitignore"
     ]
 }
