@@ -1102,7 +1102,33 @@ background-color: rgb(26, 95, 180);</string>
           <layout class="QGridLayout" name="gridLayout_16">
            <item row="2" column="0">
             <layout class="QGridLayout" name="gridLayout_18">
+             <item row="0" column="2">
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
              <item row="0" column="1">
+              <widget class="QPushButton" name="pushButton_12">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Cancelar</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
               <widget class="QPushButton" name="btn_aluno_salvar">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1118,45 +1144,6 @@ background-color: rgb(26, 95, 180);</string>
                 <string>Salvar</string>
                </property>
               </widget>
-             </item>
-             <item row="0" column="0">
-              <spacer name="horizontalSpacer_8">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="0" column="2">
-              <widget class="QPushButton" name="pushButton_12">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Cancelar</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <spacer name="horizontalSpacer_9">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
              </item>
             </layout>
            </item>
@@ -1244,115 +1231,280 @@ background-color: rgb(26, 95, 180);</string>
            </item>
            <item row="1" column="0">
             <layout class="QGridLayout" name="gridLayout_17">
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_nome"/>
-             </item>
              <item row="4" column="0">
               <widget class="QLabel" name="label_29">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Email:</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_endereco"/>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_27">
-               <property name="text">
-                <string>CPF:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="10" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_sexo"/>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_28">
-               <property name="text">
-                <string>Data Nascimento:</string>
+             <item row="7" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_bairro">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
                </property>
               </widget>
              </item>
              <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_nascimento"/>
-             </item>
-             <item row="9" column="0">
-              <widget class="QLabel" name="label_32">
-               <property name="text">
-                <string>Complemento:</string>
+              <widget class="QLineEdit" name="lineEdit_aluno_nascimento">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
                </property>
               </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_email"/>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_26">
-               <property name="text">
-                <string>Nome:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_matricula"/>
-             </item>
-             <item row="8" column="0">
-              <widget class="QLabel" name="label_31">
-               <property name="text">
-                <string>Numero:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_cpf"/>
-             </item>
-             <item row="7" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_bairro"/>
-             </item>
-             <item row="10" column="0">
-              <widget class="QLabel" name="label_33">
-               <property name="text">
-                <string>Sexo:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="0">
-              <widget class="QLabel" name="label_36">
-               <property name="text">
-                <string>Bairro:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_numero"/>
              </item>
              <item row="0" column="0">
               <widget class="QLabel" name="label_2">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Matricula:</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_complemento"/>
+             <item row="10" column="1">
+              <widget class="QComboBox" name="comboBox_aluno_sexo">
+               <item>
+                <property name="text">
+                 <string>Masculino</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Feminino</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Outro</string>
+                </property>
+               </item>
+              </widget>
              </item>
-             <item row="6" column="0">
-              <widget class="QLabel" name="label_30">
+             <item row="8" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_numero">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_endereco">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_telefone">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_cpf">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_email">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_matricula">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_31">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
-                <string>Endereço:</string>
+                <string>Numero:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_36">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Bairro:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="label_32">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Complemento:</string>
                </property>
               </widget>
              </item>
              <item row="5" column="0">
               <widget class="QLabel" name="label_37">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Telefone:</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="1">
-              <widget class="QLineEdit" name="lineEdit_aluno_telefone"/>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_30">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Endereço:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_complemento">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_26">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Nome:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_28">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Data Nascimento:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEdit_aluno_nome">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="label_33">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Sexo:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_27">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>CPF:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <spacer name="horizontalSpacer_11">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>

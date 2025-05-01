@@ -1,5 +1,5 @@
 from PySide6.QtCore import QStringListModel, Qt
-from PySide6.QtWidgets import QLineEdit, QCompleter, QPushButton
+from PySide6.QtWidgets import QLineEdit, QCompleter, QPushButton, QComboBox
 from db.queries import obter_clientes_por_nome, atualizar_cliente
 from datetime import datetime
 
@@ -22,13 +22,14 @@ class Aluno:
         self.bairro = self.ui.findChild(QLineEdit, "lineEdit_aluno_bairro")
         self.numero = self.ui.findChild(QLineEdit, "lineEdit_aluno_numero")
         self.complemento = self.ui.findChild(QLineEdit, "lineEdit_aluno_complemento")
-        self.sexo = self.ui.findChild(QLineEdit, "lineEdit_aluno_sexo")
+        self.sexo = self.ui.findChild(QComboBox, "comboBox_aluno_sexo")
 
         # configurando autocompleter
         self.modelo_completer = QStringListModel()
         self.completer = QCompleter()
         self.completer.setModel(self.modelo_completer)
         self.completer.setCaseSensitivity(Qt.CaseInsensitive)
+        self.completer.popup().pressed.connect(self.pesquisa_aluno)
 
         self.campo_pesquisa.setCompleter(self.completer)
         self.campo_pesquisa.textChanged.connect(self.atualizar_sugestoes)
@@ -40,9 +41,9 @@ class Aluno:
             self.modelo_completer.setStringList(nomes)
         else:
             self.modelo_completer.setStringList([])
-
     def pesquisa_aluno(self):
         campo_pesquisa = self.campo_pesquisa.text()
+        self.completer.popup().hide()
         alunos = obter_clientes_por_nome(campo_pesquisa)
 
         if alunos:
@@ -74,7 +75,14 @@ class Aluno:
         self.bairro.setText(bairro)
         self.numero.setText(str(numero))
         self.complemento.setText(complemento)
-        self.sexo.setText(sexo)
+        if sexo == "M":
+            self.sexo.setCurrentIndex(0)
+        elif sexo == "F":
+            self.sexo.setCurrentIndex(1)
+        elif sexo == "O":
+            self.sexo.setCurrentIndex(2)
+
+    
 
     def editar_aluno(self):
         try:
@@ -89,7 +97,7 @@ class Aluno:
                 "bairro": self.bairro.text(),
                 "numero": self.numero.text(),
                 "complemento": self.complemento.text(),
-                "sexo": self.sexo.text()
+                "sexo": self.sexo.currentText()
             }
             sucesso = atualizar_cliente(id_cliente, campos)
             print("Atualização realizada com sucesso" if sucesso else "Falha na atualização")

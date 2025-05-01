@@ -594,6 +594,17 @@ class Ui_Home(object):
         self.gridLayout_16.setObjectName(u"gridLayout_16")
         self.gridLayout_18 = QGridLayout()
         self.gridLayout_18.setObjectName(u"gridLayout_18")
+        self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_18.addItem(self.horizontalSpacer_9, 0, 2, 1, 1)
+
+        self.pushButton_12 = QPushButton(self.Perfil_tab)
+        self.pushButton_12.setObjectName(u"pushButton_12")
+        sizePolicy4.setHeightForWidth(self.pushButton_12.sizePolicy().hasHeightForWidth())
+        self.pushButton_12.setSizePolicy(sizePolicy4)
+
+        self.gridLayout_18.addWidget(self.pushButton_12, 0, 1, 1, 1)
+
         self.btn_aluno_salvar = QPushButton(self.Perfil_tab)
         self.btn_aluno_salvar.setObjectName(u"btn_aluno_salvar")
         sizePolicy4.setHeightForWidth(self.btn_aluno_salvar.sizePolicy().hasHeightForWidth())
@@ -601,22 +612,7 @@ class Ui_Home(object):
         self.btn_aluno_salvar.setStyleSheet(u"color: white;\n"
 "background-color: rgb(26, 95, 180);")
 
-        self.gridLayout_18.addWidget(self.btn_aluno_salvar, 0, 1, 1, 1)
-
-        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_18.addItem(self.horizontalSpacer_8, 0, 0, 1, 1)
-
-        self.pushButton_12 = QPushButton(self.Perfil_tab)
-        self.pushButton_12.setObjectName(u"pushButton_12")
-        sizePolicy4.setHeightForWidth(self.pushButton_12.sizePolicy().hasHeightForWidth())
-        self.pushButton_12.setSizePolicy(sizePolicy4)
-
-        self.gridLayout_18.addWidget(self.pushButton_12, 0, 2, 1, 1)
-
-        self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_18.addItem(self.horizontalSpacer_9, 0, 3, 1, 1)
+        self.gridLayout_18.addWidget(self.btn_aluno_salvar, 0, 0, 1, 1)
 
 
         self.gridLayout_16.addLayout(self.gridLayout_18, 2, 0, 1, 1)
@@ -660,115 +656,143 @@ class Ui_Home(object):
 
         self.gridLayout_17 = QGridLayout()
         self.gridLayout_17.setObjectName(u"gridLayout_17")
-        self.lineEdit_aluno_nome = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_nome.setObjectName(u"lineEdit_aluno_nome")
-
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_nome, 1, 1, 1, 1)
-
         self.label_29 = QLabel(self.Perfil_tab)
         self.label_29.setObjectName(u"label_29")
+        self.label_29.setMaximumSize(QSize(100, 16777215))
 
         self.gridLayout_17.addWidget(self.label_29, 4, 0, 1, 1)
 
-        self.lineEdit_aluno_endereco = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_endereco.setObjectName(u"lineEdit_aluno_endereco")
+        self.lineEdit_aluno_bairro = QLineEdit(self.Perfil_tab)
+        self.lineEdit_aluno_bairro.setObjectName(u"lineEdit_aluno_bairro")
+        self.lineEdit_aluno_bairro.setMaximumSize(QSize(300, 16777215))
 
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_endereco, 6, 1, 1, 1)
-
-        self.label_27 = QLabel(self.Perfil_tab)
-        self.label_27.setObjectName(u"label_27")
-
-        self.gridLayout_17.addWidget(self.label_27, 2, 0, 1, 1)
-
-        self.lineEdit_aluno_sexo = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_sexo.setObjectName(u"lineEdit_aluno_sexo")
-
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_sexo, 10, 1, 1, 1)
-
-        self.label_28 = QLabel(self.Perfil_tab)
-        self.label_28.setObjectName(u"label_28")
-
-        self.gridLayout_17.addWidget(self.label_28, 3, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.lineEdit_aluno_bairro, 7, 1, 1, 1)
 
         self.lineEdit_aluno_nascimento = QLineEdit(self.Perfil_tab)
         self.lineEdit_aluno_nascimento.setObjectName(u"lineEdit_aluno_nascimento")
+        self.lineEdit_aluno_nascimento.setMaximumSize(QSize(300, 16777215))
 
         self.gridLayout_17.addWidget(self.lineEdit_aluno_nascimento, 3, 1, 1, 1)
 
-        self.label_32 = QLabel(self.Perfil_tab)
-        self.label_32.setObjectName(u"label_32")
+        self.label_2 = QLabel(self.Perfil_tab)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMaximumSize(QSize(100, 16777215))
 
-        self.gridLayout_17.addWidget(self.label_32, 9, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.label_2, 0, 0, 1, 1)
+
+        self.comboBox_aluno_sexo = QComboBox(self.Perfil_tab)
+        self.comboBox_aluno_sexo.addItem("")
+        self.comboBox_aluno_sexo.addItem("")
+        self.comboBox_aluno_sexo.addItem("")
+        self.comboBox_aluno_sexo.setObjectName(u"comboBox_aluno_sexo")
+
+        self.gridLayout_17.addWidget(self.comboBox_aluno_sexo, 10, 1, 1, 1)
+
+        self.lineEdit_aluno_numero = QLineEdit(self.Perfil_tab)
+        self.lineEdit_aluno_numero.setObjectName(u"lineEdit_aluno_numero")
+        self.lineEdit_aluno_numero.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_17.addWidget(self.lineEdit_aluno_numero, 8, 1, 1, 1)
+
+        self.lineEdit_aluno_endereco = QLineEdit(self.Perfil_tab)
+        self.lineEdit_aluno_endereco.setObjectName(u"lineEdit_aluno_endereco")
+        self.lineEdit_aluno_endereco.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_17.addWidget(self.lineEdit_aluno_endereco, 6, 1, 1, 1)
+
+        self.lineEdit_aluno_telefone = QLineEdit(self.Perfil_tab)
+        self.lineEdit_aluno_telefone.setObjectName(u"lineEdit_aluno_telefone")
+        self.lineEdit_aluno_telefone.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_17.addWidget(self.lineEdit_aluno_telefone, 5, 1, 1, 1)
+
+        self.lineEdit_aluno_cpf = QLineEdit(self.Perfil_tab)
+        self.lineEdit_aluno_cpf.setObjectName(u"lineEdit_aluno_cpf")
+        self.lineEdit_aluno_cpf.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_17.addWidget(self.lineEdit_aluno_cpf, 2, 1, 1, 1)
 
         self.lineEdit_aluno_email = QLineEdit(self.Perfil_tab)
         self.lineEdit_aluno_email.setObjectName(u"lineEdit_aluno_email")
+        self.lineEdit_aluno_email.setMaximumSize(QSize(300, 16777215))
 
         self.gridLayout_17.addWidget(self.lineEdit_aluno_email, 4, 1, 1, 1)
 
-        self.label_26 = QLabel(self.Perfil_tab)
-        self.label_26.setObjectName(u"label_26")
-
-        self.gridLayout_17.addWidget(self.label_26, 1, 0, 1, 1)
-
         self.lineEdit_aluno_matricula = QLineEdit(self.Perfil_tab)
         self.lineEdit_aluno_matricula.setObjectName(u"lineEdit_aluno_matricula")
+        self.lineEdit_aluno_matricula.setMaximumSize(QSize(300, 16777215))
 
         self.gridLayout_17.addWidget(self.lineEdit_aluno_matricula, 0, 1, 1, 1)
 
         self.label_31 = QLabel(self.Perfil_tab)
         self.label_31.setObjectName(u"label_31")
+        self.label_31.setMaximumSize(QSize(100, 16777215))
 
         self.gridLayout_17.addWidget(self.label_31, 8, 0, 1, 1)
 
-        self.lineEdit_aluno_cpf = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_cpf.setObjectName(u"lineEdit_aluno_cpf")
-
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_cpf, 2, 1, 1, 1)
-
-        self.lineEdit_aluno_bairro = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_bairro.setObjectName(u"lineEdit_aluno_bairro")
-
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_bairro, 7, 1, 1, 1)
-
-        self.label_33 = QLabel(self.Perfil_tab)
-        self.label_33.setObjectName(u"label_33")
-
-        self.gridLayout_17.addWidget(self.label_33, 10, 0, 1, 1)
-
         self.label_36 = QLabel(self.Perfil_tab)
         self.label_36.setObjectName(u"label_36")
+        self.label_36.setMaximumSize(QSize(100, 16777215))
 
         self.gridLayout_17.addWidget(self.label_36, 7, 0, 1, 1)
 
-        self.lineEdit_aluno_numero = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_numero.setObjectName(u"lineEdit_aluno_numero")
+        self.label_32 = QLabel(self.Perfil_tab)
+        self.label_32.setObjectName(u"label_32")
+        self.label_32.setMaximumSize(QSize(100, 16777215))
 
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_numero, 8, 1, 1, 1)
-
-        self.label_2 = QLabel(self.Perfil_tab)
-        self.label_2.setObjectName(u"label_2")
-
-        self.gridLayout_17.addWidget(self.label_2, 0, 0, 1, 1)
-
-        self.lineEdit_aluno_complemento = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_complemento.setObjectName(u"lineEdit_aluno_complemento")
-
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_complemento, 9, 1, 1, 1)
-
-        self.label_30 = QLabel(self.Perfil_tab)
-        self.label_30.setObjectName(u"label_30")
-
-        self.gridLayout_17.addWidget(self.label_30, 6, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.label_32, 9, 0, 1, 1)
 
         self.label_37 = QLabel(self.Perfil_tab)
         self.label_37.setObjectName(u"label_37")
+        self.label_37.setMaximumSize(QSize(100, 16777215))
 
         self.gridLayout_17.addWidget(self.label_37, 5, 0, 1, 1)
 
-        self.lineEdit_aluno_telefone = QLineEdit(self.Perfil_tab)
-        self.lineEdit_aluno_telefone.setObjectName(u"lineEdit_aluno_telefone")
+        self.label_30 = QLabel(self.Perfil_tab)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setMaximumSize(QSize(100, 16777215))
 
-        self.gridLayout_17.addWidget(self.lineEdit_aluno_telefone, 5, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.label_30, 6, 0, 1, 1)
+
+        self.lineEdit_aluno_complemento = QLineEdit(self.Perfil_tab)
+        self.lineEdit_aluno_complemento.setObjectName(u"lineEdit_aluno_complemento")
+        self.lineEdit_aluno_complemento.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_17.addWidget(self.lineEdit_aluno_complemento, 9, 1, 1, 1)
+
+        self.label_26 = QLabel(self.Perfil_tab)
+        self.label_26.setObjectName(u"label_26")
+        self.label_26.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_17.addWidget(self.label_26, 1, 0, 1, 1)
+
+        self.label_28 = QLabel(self.Perfil_tab)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_17.addWidget(self.label_28, 3, 0, 1, 1)
+
+        self.lineEdit_aluno_nome = QLineEdit(self.Perfil_tab)
+        self.lineEdit_aluno_nome.setObjectName(u"lineEdit_aluno_nome")
+        self.lineEdit_aluno_nome.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_17.addWidget(self.lineEdit_aluno_nome, 1, 1, 1, 1)
+
+        self.label_33 = QLabel(self.Perfil_tab)
+        self.label_33.setObjectName(u"label_33")
+        self.label_33.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_17.addWidget(self.label_33, 10, 0, 1, 1)
+
+        self.label_27 = QLabel(self.Perfil_tab)
+        self.label_27.setObjectName(u"label_27")
+        self.label_27.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_17.addWidget(self.label_27, 2, 0, 1, 1)
+
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_17.addItem(self.horizontalSpacer_11, 0, 2, 1, 1)
 
 
         self.gridLayout_16.addLayout(self.gridLayout_17, 1, 0, 1, 1)
@@ -907,22 +931,26 @@ class Ui_Home(object):
         self.label_23.setText(QCoreApplication.translate("Home", u"Matricula", None))
         self.label_22.setText(QCoreApplication.translate("Home", u"Nome:", None))
         self.pushButton_8.setText(QCoreApplication.translate("Home", u"Buscar", None))
-        self.btn_aluno_salvar.setText(QCoreApplication.translate("Home", u"Salvar", None))
         self.pushButton_12.setText(QCoreApplication.translate("Home", u"Cancelar", None))
+        self.btn_aluno_salvar.setText(QCoreApplication.translate("Home", u"Salvar", None))
         self.label_25.setText(QCoreApplication.translate("Home", u"Foto", None))
         self.pushButton_10.setText(QCoreApplication.translate("Home", u"Salvar Foto", None))
         self.pushButton_11.setText(QCoreApplication.translate("Home", u"Escolher Foto", None))
         self.label_29.setText(QCoreApplication.translate("Home", u"Email:", None))
-        self.label_27.setText(QCoreApplication.translate("Home", u"CPF:", None))
-        self.label_28.setText(QCoreApplication.translate("Home", u"Data Nascimento:", None))
-        self.label_32.setText(QCoreApplication.translate("Home", u"Complemento:", None))
-        self.label_26.setText(QCoreApplication.translate("Home", u"Nome:", None))
-        self.label_31.setText(QCoreApplication.translate("Home", u"Numero:", None))
-        self.label_33.setText(QCoreApplication.translate("Home", u"Sexo:", None))
-        self.label_36.setText(QCoreApplication.translate("Home", u"Bairro:", None))
         self.label_2.setText(QCoreApplication.translate("Home", u"Matricula:", None))
-        self.label_30.setText(QCoreApplication.translate("Home", u"Endere\u00e7o:", None))
+        self.comboBox_aluno_sexo.setItemText(0, QCoreApplication.translate("Home", u"Masculino", None))
+        self.comboBox_aluno_sexo.setItemText(1, QCoreApplication.translate("Home", u"Feminino", None))
+        self.comboBox_aluno_sexo.setItemText(2, QCoreApplication.translate("Home", u"Outro", None))
+
+        self.label_31.setText(QCoreApplication.translate("Home", u"Numero:", None))
+        self.label_36.setText(QCoreApplication.translate("Home", u"Bairro:", None))
+        self.label_32.setText(QCoreApplication.translate("Home", u"Complemento:", None))
         self.label_37.setText(QCoreApplication.translate("Home", u"Telefone:", None))
+        self.label_30.setText(QCoreApplication.translate("Home", u"Endere\u00e7o:", None))
+        self.label_26.setText(QCoreApplication.translate("Home", u"Nome:", None))
+        self.label_28.setText(QCoreApplication.translate("Home", u"Data Nascimento:", None))
+        self.label_33.setText(QCoreApplication.translate("Home", u"Sexo:", None))
+        self.label_27.setText(QCoreApplication.translate("Home", u"CPF:", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Perfil_tab), QCoreApplication.translate("Home", u"Perfil", None))
         self.label_35.setText(QCoreApplication.translate("Home", u"Dia do vencimento:", None))
         self.label_34.setText(QCoreApplication.translate("Home", u"Tipo de plano:", None))

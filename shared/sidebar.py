@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication, QWidget
-from class_interface.ui_principal import Ui_Home
+from ui_interface.ui_principal import Ui_Home
 from pages.home import Home
 from pages.cadastro_clientes import CadastroClientes
 from pages.financeiro import Financeiro

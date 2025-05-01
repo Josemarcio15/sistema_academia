@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication, QWidget
-from class_interface.ui_login import Ui_Widget
-from class_interface.ui_principal import Ui_Home
+from ui_interface.ui_login import Ui_Widget
+from ui_interface.ui_principal import Ui_Home
 from shared.sidebar import Sidebar
 
 class Widget(QWidget):

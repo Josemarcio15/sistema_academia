@@ -1,7 +1,7 @@
 {
     "files": [
-        "class_interface/ui_login.py",
-        "class_interface/ui_principal.py",
+        "ui_interface/ui_login.py",
+        "ui_interface/ui_principal.py",
         "widget.py",
         "ui_interface/login.ui",
         "ui_interface/principal.ui",
