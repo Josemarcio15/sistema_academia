@@ -97,7 +97,7 @@ class Aluno:
                 "bairro": self.bairro.text(),
                 "numero": self.numero.text(),
                 "complemento": self.complemento.text(),
-                "sexo": self.sexo.currentText()
+                "sexo": self.sexo.currentText()[0]
             }
             sucesso = atualizar_cliente(id_cliente, campos)
             print("Atualização realizada com sucesso" if sucesso else "Falha na atualização")

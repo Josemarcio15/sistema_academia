@@ -9,13 +9,14 @@ class Financeiro:
         #FindChild
         self.campo_pesquisa = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_cliente")
         self.campo_pesquisa_id = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_id")
-        self.ui.findChild(QPushButton, "button_financeiro_pesquisar").clicked.connect(self.mostrar_print)
+        self.ui.findChild(QPushButton, "button_financeiro_pesquisar").clicked.connect(self.pesquisa_aluno)
         
         #autoComplete
         self.modelo_completer = QStringListModel()
         self.completer = QCompleter()
         self.completer.setModel(self.modelo_completer)
         self.completer.setCaseSensitivity(Qt.CaseInsensitive)
+        self.completer.popup().pressed.connect(self.pesquisa_aluno)
 
         self.campo_pesquisa.setCompleter(self.completer)
         self.campo_pesquisa_id.setCompleter(self.completer)
@@ -41,5 +42,9 @@ class Financeiro:
             self.modelo_completer.setStringList([])
     
 
-    def mostrar_print(self):
+    def pesquisa_aluno(self):
+        campo_pesquisa = self.campo_pesquisa.text()
+        self.completer.popup().hide()
+        alunos = obter_clientes_por_nome(campo_pesquisa)
+
         print(self.campo_pesquisa.text())

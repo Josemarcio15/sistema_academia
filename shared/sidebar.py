@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication, QWidget
-from ui_interface.ui_principal import Ui_Home
+from ui_interface.ui_principal import Ui_Principal
 from pages.home import Home
 from pages.cadastro_clientes import CadastroClientes
 from pages.financeiro import Financeiro
@@ -9,7 +9,7 @@ from pages.aluno import Aluno
 class Sidebar(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.ui = Ui_Home()
+        self.ui = Ui_Principal()
         self.ui.setupUi(self)
 
         # Dicionário para armazenar as instâncias das páginas
