@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QLineEdit, QPushButton, QCompleter
+from PySide6.QtWidgets import QLineEdit, QPushButton, QCompleter, QComboBox, QDateEdit
 from PySide6.QtCore import QStringListModel, Qt
 from db.queries import obter_clientes_por_nome, obter_id_cliente
 
@@ -7,10 +7,17 @@ class Financeiro:
         self.ui = widget_pagina
         
         #FindChild
+        self.ui.findChild(QPushButton, "btn_financeiro_pesquisar").clicked.connect(self.pesquisa_aluno)
         self.campo_pesquisa = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_cliente")
-        self.campo_pesquisa_id = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_id")
-        self.ui.findChild(QPushButton, "button_financeiro_pesquisar").clicked.connect(self.pesquisa_aluno)
-        
+        self.campo_pesquisa_matricula = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_id")
+        self.nome = self.ui.findChild(QLineEdit, "lineEdit_financeiro_nome")
+        self.cpf = self.ui.findChild(QLineEdit, "lineEdit_financeiro_cpf")
+        self.valor_a_pagar = self.ui.findChild(QLineEdit, "lineEdit_financeiro_valorApagar")
+        self.plano = self.ui.findChild(QComboBox, "comboBox_financeiro_plano")
+        self.status = self.ui.findChild(QComboBox, "comboBox_financeiro_status")
+        self.vencimento = self.ui.findChild(QDateEdit, "dateEdit_financeiro_vencimento")
+
+
         #autoComplete
         self.modelo_completer = QStringListModel()
         self.completer = QCompleter()
@@ -19,10 +26,10 @@ class Financeiro:
         self.completer.popup().pressed.connect(self.pesquisa_aluno)
 
         self.campo_pesquisa.setCompleter(self.completer)
-        self.campo_pesquisa_id.setCompleter(self.completer)
+        self.campo_pesquisa_matricula.setCompleter(self.completer)
 
         self.campo_pesquisa.textChanged.connect(self.atualizar_sugestoes)
-        self.campo_pesquisa_id.textChanged.connect(self.pesquisa_id)
+        self.campo_pesquisa_matricula.textChanged.connect(self.pesquisa_id)
 
     def atualizar_sugestoes(self, texto):
         if texto:
@@ -46,5 +53,50 @@ class Financeiro:
         campo_pesquisa = self.campo_pesquisa.text()
         self.completer.popup().hide()
         alunos = obter_clientes_por_nome(campo_pesquisa)
+        if alunos:
+            aluno = alunos[0]
+            self.mostrar_dados_aluno(
 
-        print(self.campo_pesquisa.text())
+                aluno["id"],
+                aluno["nome"],
+                aluno["cpf"],
+                aluno["data_nascimento"],
+                aluno["email"],
+                aluno["telefone"],
+                aluno["endereco"],
+                aluno["bairro"],
+                aluno["numero"],
+                aluno["complemento"],
+                aluno["sexo"]
+            )
+        
+
+    def mostrar_dados_aluno(self, matricula, nome, cpf, email, telefone, endereco, bairro, numero, complemento, sexo):
+        
+
+        self.campo_pesquisa_matricula.setText(matricula)
+        self.nome.setText(nome)
+        self.cpf.setText(cpf)
+        
+
+    
+
+    # def editar_aluno(self):
+    #     try:
+    #         id_cliente = int(self.matricula.text())
+    #         campos = {
+    #             "nome": self.nome.text(),
+    #             "cpf": self.cpf.text(),
+    #             "data_nascimento": datetime.strptime(self.data_nascimento.text(), "%d/%m/%Y").strftime("%Y-%m-%d"),
+    #             "email": self.email.text(),
+    #             "telefone": self.telefone.text(),
+    #             "endereco": self.endereco.text(),
+    #             "bairro": self.bairro.text(),
+    #             "numero": self.numero.text(),
+    #             "complemento": self.complemento.text(),
+    #             "sexo": self.sexo.currentText()[0]
+    #         }
+    #         sucesso = atualizar_cliente(id_cliente, campos)
+    #         print("Atualização realizada com sucesso" if sucesso else "Falha na atualização")
+    #     except Exception as e:
+    #         print(f"Erro ao editar aluno: {e}")

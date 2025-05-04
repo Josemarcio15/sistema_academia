@@ -44,7 +44,7 @@
    <item row="0" column="1" rowspan="6">
     <widget class="QStackedWidget" name="stacked_principal">
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page_inicio">
       <widget class="QPushButton" name="pushButton">
@@ -458,7 +458,7 @@ background-color: rgb(26, 95, 180);</string>
        <item row="3" column="1">
         <layout class="QGridLayout" name="gridLayout_25">
          <item row="0" column="0">
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="btn_financeiro_efetuarPagamento">
            <property name="styleSheet">
             <string notr="true">color: white;
 background-color: rgb(26, 95, 180);</string>
@@ -521,7 +521,7 @@ background-color: rgb(26, 95, 180);</string>
          <item row="2" column="1">
           <layout class="QGridLayout" name="gridLayout_19">
            <item row="0" column="0">
-            <widget class="QComboBox" name="comboBox">
+            <widget class="QComboBox" name="comboBox_financeiro_plano">
              <item>
               <property name="text">
                <string>Diario</string>
@@ -565,7 +565,7 @@ background-color: rgb(26, 95, 180);</string>
           </layout>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit">
+          <widget class="QLineEdit" name="lineEdit_financeiro_nome">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -583,7 +583,7 @@ background-color: rgb(26, 95, 180);</string>
          <item row="2" column="3">
           <layout class="QGridLayout" name="gridLayout_23">
            <item row="0" column="0">
-            <widget class="QDateEdit" name="dateEdit_2">
+            <widget class="QDateEdit" name="dateEdit_financeiro_vencimento">
              <property name="displayFormat">
               <string>d</string>
              </property>
@@ -610,7 +610,7 @@ background-color: rgb(26, 95, 180);</string>
          <item row="4" column="1">
           <layout class="QGridLayout" name="gridLayout_21">
            <item row="0" column="2">
-            <widget class="QComboBox" name="comboBox_2">
+            <widget class="QComboBox" name="comboBox_financeiro_status">
              <item>
               <property name="text">
                <string>Ativo</string>
@@ -742,7 +742,7 @@ background-color: rgb(26, 95, 180);</string>
          <item row="0" column="3">
           <layout class="QGridLayout" name="gridLayout_22">
            <item row="0" column="0">
-            <widget class="QLineEdit" name="lineEdit_4"/>
+            <widget class="QLineEdit" name="lineEdit_financeiro_cpf"/>
            </item>
            <item row="0" column="1">
             <spacer name="horizontalSpacer_13">
@@ -778,7 +778,7 @@ background-color: rgb(26, 95, 180);</string>
             </spacer>
            </item>
            <item row="1" column="0">
-            <widget class="QLineEdit" name="lineEdit_6"/>
+            <widget class="QLineEdit" name="lineEdit_financeiro_valorApagar"/>
            </item>
           </layout>
          </item>
@@ -904,7 +904,7 @@ background-color: rgb(26, 95, 180);</string>
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QPushButton" name="button_financeiro_pesquisar">
+            <widget class="QPushButton" name="btn_financeiro_pesquisar">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
