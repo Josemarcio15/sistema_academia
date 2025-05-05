@@ -68,12 +68,36 @@ def criar_banco_e_tabelas():
             telefone VARCHAR(20),
             complemento TEXT,
             ativo BOOLEAN DEFAULT TRUE,
-            plano ENUM('MENSAL', 'ANUAL', 'NENHUM') DEFAULT 'NENHUM',
+            plano ENUM('DIARIO', 'MENSAL', 'TRIMESTRAL', 'ANUAL', 'NENHUM') DEFAULT 'NENHUM',
             data_pagamento DATE,
             dia_pagamento ENUM('1','5','10', '15', '20','25' )
         )
         """)
         print("Tabela 'clientes' criada ou já existente.")
+
+        # Criação da tabela 'taxas'
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS taxas (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            tipo ENUM('DIARIA', 'MENSAL', 'TRIMESTRAL', 'SEMESTRAL', 'ANUAL') NOT NULL,
+            valor DECIMAL(10, 2) NOT NULL,
+            data_inicio DATE NOT NULL,
+            data_fim DATE DEFAULT NULL
+        )
+        """)
+        print("Tabela 'taxas' criada ou já existente.")
+
+        # Inserir dados iniciais na tabela 'taxas'
+        cursor.execute("""
+        INSERT IGNORE INTO taxas (tipo, valor, data_inicio)
+        VALUES
+            ('DIARIA', 50.00, CURDATE()),
+            ('MENSAL', 200.00, CURDATE()),
+            ('TRIMESTRAL', 550.00, CURDATE()),
+            ('SEMESTRAL', 1000.00, CURDATE()),
+            ('ANUAL', 1800.00, CURDATE())
+        """)
+        print("Dados iniciais inseridos na tabela 'taxas'.")
 
         # Fechar a conexão
         cursor.close()

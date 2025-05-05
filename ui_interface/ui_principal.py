@@ -235,6 +235,10 @@ class Ui_Principal(object):
         self.page_financeiro.setObjectName(u"page_financeiro")
         self.gridLayout_6 = QGridLayout(self.page_financeiro)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.horizontalSpacer_3 = QSpacerItem(20, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_6.addItem(self.horizontalSpacer_3, 0, 1, 1, 1)
+
         self.label_14 = QLabel(self.page_financeiro)
         self.label_14.setObjectName(u"label_14")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
@@ -246,6 +250,10 @@ class Ui_Principal(object):
         self.label_14.setFont(font)
 
         self.gridLayout_6.addWidget(self.label_14, 0, 0, 1, 1)
+
+        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_6.addItem(self.verticalSpacer_6, 8, 0, 1, 1)
 
         self.gridLayout_25 = QGridLayout()
         self.gridLayout_25.setObjectName(u"gridLayout_25")
@@ -268,148 +276,9 @@ class Ui_Principal(object):
 
         self.gridLayout_6.addLayout(self.gridLayout_25, 3, 1, 1, 1)
 
-        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.gridLayout_6.addItem(self.verticalSpacer_6, 6, 0, 1, 1)
-
-        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_6.addItem(self.verticalSpacer_8, 4, 1, 1, 1)
-
-        self.gridLayout_11 = QGridLayout()
-        self.gridLayout_11.setObjectName(u"gridLayout_11")
-        self.gridLayout_19 = QGridLayout()
-        self.gridLayout_19.setObjectName(u"gridLayout_19")
-        self.comboBox_financeiro_plano = QComboBox(self.page_financeiro)
-        self.comboBox_financeiro_plano.addItem("")
-        self.comboBox_financeiro_plano.addItem("")
-        self.comboBox_financeiro_plano.addItem("")
-        self.comboBox_financeiro_plano.addItem("")
-        self.comboBox_financeiro_plano.addItem("")
-        self.comboBox_financeiro_plano.setObjectName(u"comboBox_financeiro_plano")
-
-        self.gridLayout_19.addWidget(self.comboBox_financeiro_plano, 0, 0, 1, 1)
-
-        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_19.addItem(self.horizontalSpacer_8, 0, 1, 1, 1)
-
-
-        self.gridLayout_11.addLayout(self.gridLayout_19, 2, 1, 1, 1)
-
-        self.lineEdit_financeiro_nome = QLineEdit(self.page_financeiro)
-        self.lineEdit_financeiro_nome.setObjectName(u"lineEdit_financeiro_nome")
-        sizePolicy1.setHeightForWidth(self.lineEdit_financeiro_nome.sizePolicy().hasHeightForWidth())
-        self.lineEdit_financeiro_nome.setSizePolicy(sizePolicy1)
-        self.lineEdit_financeiro_nome.setMaximumSize(QSize(400, 16777215))
-
-        self.gridLayout_11.addWidget(self.lineEdit_financeiro_nome, 0, 1, 1, 1)
-
-        self.gridLayout_23 = QGridLayout()
-        self.gridLayout_23.setObjectName(u"gridLayout_23")
-        self.dateEdit_financeiro_vencimento = QDateEdit(self.page_financeiro)
-        self.dateEdit_financeiro_vencimento.setObjectName(u"dateEdit_financeiro_vencimento")
-        self.dateEdit_financeiro_vencimento.setCalendarPopup(True)
-
-        self.gridLayout_23.addWidget(self.dateEdit_financeiro_vencimento, 0, 0, 1, 1)
-
-        self.horizontalSpacer_14 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_23.addItem(self.horizontalSpacer_14, 0, 1, 1, 1)
-
-
-        self.gridLayout_11.addLayout(self.gridLayout_23, 2, 3, 1, 1)
-
-        self.gridLayout_21 = QGridLayout()
-        self.gridLayout_21.setObjectName(u"gridLayout_21")
-        self.comboBox_financeiro_status = QComboBox(self.page_financeiro)
-        self.comboBox_financeiro_status.addItem("")
-        self.comboBox_financeiro_status.addItem("")
-        self.comboBox_financeiro_status.addItem("")
-        self.comboBox_financeiro_status.setObjectName(u"comboBox_financeiro_status")
-
-        self.gridLayout_21.addWidget(self.comboBox_financeiro_status, 0, 2, 1, 1)
-
-        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_21.addItem(self.horizontalSpacer_12, 0, 3, 1, 1)
-
-
-        self.gridLayout_11.addLayout(self.gridLayout_21, 4, 1, 1, 1)
-
-        self.label_17 = QLabel(self.page_financeiro)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setMaximumSize(QSize(100, 16777215))
-
-        self.gridLayout_11.addWidget(self.label_17, 0, 0, 1, 1)
-
-        self.label_19 = QLabel(self.page_financeiro)
-        self.label_19.setObjectName(u"label_19")
-        self.label_19.setMaximumSize(QSize(100, 16777215))
-
-        self.gridLayout_11.addWidget(self.label_19, 2, 0, 1, 1)
-
-        self.label_18 = QLabel(self.page_financeiro)
-        self.label_18.setObjectName(u"label_18")
-        self.label_18.setMaximumSize(QSize(100, 16777215))
-        self.label_18.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_18.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
-
-        self.gridLayout_11.addWidget(self.label_18, 0, 2, 1, 1)
-
-        self.label_20 = QLabel(self.page_financeiro)
-        self.label_20.setObjectName(u"label_20")
-        self.label_20.setMaximumSize(QSize(100, 16777215))
-        self.label_20.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_20.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
-
-        self.gridLayout_11.addWidget(self.label_20, 2, 2, 1, 1)
-
-        self.label_21 = QLabel(self.page_financeiro)
-        self.label_21.setObjectName(u"label_21")
-        self.label_21.setMaximumSize(QSize(100, 16777215))
-
-        self.gridLayout_11.addWidget(self.label_21, 4, 0, 1, 1)
-
-        self.label_24 = QLabel(self.page_financeiro)
-        self.label_24.setObjectName(u"label_24")
-        self.label_24.setMaximumSize(QSize(100, 16777215))
-        self.label_24.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_24.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
-
-        self.gridLayout_11.addWidget(self.label_24, 4, 2, 1, 1)
-
-        self.gridLayout_22 = QGridLayout()
-        self.gridLayout_22.setObjectName(u"gridLayout_22")
-        self.lineEdit_financeiro_cpf = QLineEdit(self.page_financeiro)
-        self.lineEdit_financeiro_cpf.setObjectName(u"lineEdit_financeiro_cpf")
-
-        self.gridLayout_22.addWidget(self.lineEdit_financeiro_cpf, 0, 0, 1, 1)
-
-        self.horizontalSpacer_13 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_22.addItem(self.horizontalSpacer_13, 0, 1, 1, 1)
-
-
-        self.gridLayout_11.addLayout(self.gridLayout_22, 0, 3, 1, 1)
-
-        self.gridLayout_24 = QGridLayout()
-        self.gridLayout_24.setObjectName(u"gridLayout_24")
-        self.gridLayout_24.setHorizontalSpacing(0)
-        self.horizontalSpacer_15 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_24.addItem(self.horizontalSpacer_15, 1, 1, 1, 1)
-
-        self.lineEdit_financeiro_valorApagar = QLineEdit(self.page_financeiro)
-        self.lineEdit_financeiro_valorApagar.setObjectName(u"lineEdit_financeiro_valorApagar")
-
-        self.gridLayout_24.addWidget(self.lineEdit_financeiro_valorApagar, 1, 0, 1, 1)
-
-
-        self.gridLayout_11.addLayout(self.gridLayout_24, 4, 3, 1, 1)
-
-
-        self.gridLayout_6.addLayout(self.gridLayout_11, 2, 1, 1, 1)
+        self.gridLayout_6.addItem(self.horizontalSpacer_4, 7, 1, 1, 1)
 
         self.label_13 = QLabel(self.page_financeiro)
         self.label_13.setObjectName(u"label_13")
@@ -420,23 +289,224 @@ class Ui_Principal(object):
 
         self.gridLayout_6.addWidget(self.label_13, 1, 0, 1, 1)
 
-        self.horizontalSpacer_3 = QSpacerItem(20, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        self.gridLayout_11 = QGridLayout()
+        self.gridLayout_11.setObjectName(u"gridLayout_11")
+        self.gridLayout_24 = QGridLayout()
+        self.gridLayout_24.setObjectName(u"gridLayout_24")
+        self.gridLayout_24.setHorizontalSpacing(0)
 
-        self.gridLayout_6.addItem(self.horizontalSpacer_3, 0, 1, 1, 1)
+        self.gridLayout_11.addLayout(self.gridLayout_24, 4, 3, 1, 1)
+
+        self.gridLayout_26 = QGridLayout()
+        self.gridLayout_26.setObjectName(u"gridLayout_26")
+        self.lineEdit_financeiro_nome = QLineEdit(self.page_financeiro)
+        self.lineEdit_financeiro_nome.setObjectName(u"lineEdit_financeiro_nome")
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.lineEdit_financeiro_nome.sizePolicy().hasHeightForWidth())
+        self.lineEdit_financeiro_nome.setSizePolicy(sizePolicy2)
+        self.lineEdit_financeiro_nome.setMinimumSize(QSize(400, 0))
+        self.lineEdit_financeiro_nome.setMaximumSize(QSize(400, 16777215))
+
+        self.gridLayout_26.addWidget(self.lineEdit_financeiro_nome, 0, 0, 1, 1)
+
+        self.lineEdit_financeiro_cpf = QLineEdit(self.page_financeiro)
+        self.lineEdit_financeiro_cpf.setObjectName(u"lineEdit_financeiro_cpf")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.lineEdit_financeiro_cpf.sizePolicy().hasHeightForWidth())
+        self.lineEdit_financeiro_cpf.setSizePolicy(sizePolicy3)
+        self.lineEdit_financeiro_cpf.setMinimumSize(QSize(200, 0))
+        self.lineEdit_financeiro_cpf.setMaximumSize(QSize(200, 16777215))
+
+        self.gridLayout_26.addWidget(self.lineEdit_financeiro_cpf, 0, 2, 1, 1)
+
+        self.label_18 = QLabel(self.page_financeiro)
+        self.label_18.setObjectName(u"label_18")
+        self.label_18.setMaximumSize(QSize(100, 16777215))
+        self.label_18.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_18.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+
+        self.gridLayout_26.addWidget(self.label_18, 0, 1, 1, 1)
+
+        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_26.addItem(self.horizontalSpacer_8, 0, 3, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_26, 0, 1, 1, 1)
+
+        self.gridLayout_19 = QGridLayout()
+        self.gridLayout_19.setObjectName(u"gridLayout_19")
+        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_19.addItem(self.horizontalSpacer_12, 0, 5, 1, 1)
+
+        self.label_20 = QLabel(self.page_financeiro)
+        self.label_20.setObjectName(u"label_20")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.label_20.sizePolicy().hasHeightForWidth())
+        self.label_20.setSizePolicy(sizePolicy4)
+        self.label_20.setMaximumSize(QSize(300, 16777215))
+        self.label_20.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_20.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+
+        self.gridLayout_19.addWidget(self.label_20, 0, 3, 1, 1)
+
+        self.comboBox = QComboBox(self.page_financeiro)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.gridLayout_19.addWidget(self.comboBox, 0, 4, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_19, 2, 1, 1, 1)
+
+        self.gridLayout_23 = QGridLayout()
+        self.gridLayout_23.setObjectName(u"gridLayout_23")
+
+        self.gridLayout_11.addLayout(self.gridLayout_23, 2, 3, 1, 1)
+
+        self.label_19 = QLabel(self.page_financeiro)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_11.addWidget(self.label_19, 4, 0, 1, 1)
+
+        self.label_17 = QLabel(self.page_financeiro)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_11.addWidget(self.label_17, 0, 0, 1, 1)
+
+        self.label_39 = QLabel(self.page_financeiro)
+        self.label_39.setObjectName(u"label_39")
+        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.label_39.sizePolicy().hasHeightForWidth())
+        self.label_39.setSizePolicy(sizePolicy5)
+        self.label_39.setMinimumSize(QSize(70, 0))
+        self.label_39.setMaximumSize(QSize(70, 16777215))
+        self.label_39.setFrameShape(QFrame.Shape.StyledPanel)
+        self.label_39.setFrameShadow(QFrame.Shadow.Sunken)
+        self.label_39.setLineWidth(10)
+        self.label_39.setMidLineWidth(10)
+
+        self.gridLayout_11.addWidget(self.label_39, 1, 1, 1, 1)
+
+        self.gridLayout_21 = QGridLayout()
+        self.gridLayout_21.setObjectName(u"gridLayout_21")
+        self.dateEdit_2 = QDateEdit(self.page_financeiro)
+        self.dateEdit_2.setObjectName(u"dateEdit_2")
+
+        self.gridLayout_21.addWidget(self.dateEdit_2, 0, 1, 1, 1)
+
+        self.label_24 = QLabel(self.page_financeiro)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setMaximumSize(QSize(100, 16777215))
+        self.label_24.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_24.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+
+        self.gridLayout_21.addWidget(self.label_24, 0, 2, 1, 1)
+
+        self.label_38 = QLabel(self.page_financeiro)
+        self.label_38.setObjectName(u"label_38")
+
+        self.gridLayout_21.addWidget(self.label_38, 0, 4, 1, 1)
+
+        self.horizontalSpacer_13 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_21.addItem(self.horizontalSpacer_13, 0, 6, 1, 1)
+
+        self.comboBox_financeiro_plano = QComboBox(self.page_financeiro)
+        self.comboBox_financeiro_plano.addItem("")
+        self.comboBox_financeiro_plano.addItem("")
+        self.comboBox_financeiro_plano.addItem("")
+        self.comboBox_financeiro_plano.addItem("")
+        self.comboBox_financeiro_plano.addItem("")
+        self.comboBox_financeiro_plano.setObjectName(u"comboBox_financeiro_plano")
+
+        self.gridLayout_21.addWidget(self.comboBox_financeiro_plano, 0, 0, 1, 1)
+
+        self.lineEdit_financeiro_valorApagar = QLineEdit(self.page_financeiro)
+        self.lineEdit_financeiro_valorApagar.setObjectName(u"lineEdit_financeiro_valorApagar")
+        sizePolicy3.setHeightForWidth(self.lineEdit_financeiro_valorApagar.sizePolicy().hasHeightForWidth())
+        self.lineEdit_financeiro_valorApagar.setSizePolicy(sizePolicy3)
+        self.lineEdit_financeiro_valorApagar.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_21.addWidget(self.lineEdit_financeiro_valorApagar, 0, 3, 1, 1)
+
+        self.lineEdit_financeiro_desconto = QLineEdit(self.page_financeiro)
+        self.lineEdit_financeiro_desconto.setObjectName(u"lineEdit_financeiro_desconto")
+        self.lineEdit_financeiro_desconto.setMinimumSize(QSize(100, 0))
+        self.lineEdit_financeiro_desconto.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_21.addWidget(self.lineEdit_financeiro_desconto, 0, 5, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_21, 4, 1, 1, 1)
+
+        self.label_21 = QLabel(self.page_financeiro)
+        self.label_21.setObjectName(u"label_21")
+        self.label_21.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_11.addWidget(self.label_21, 1, 0, 1, 1)
+
+
+        self.gridLayout_6.addLayout(self.gridLayout_11, 2, 1, 1, 1)
+
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_6.addItem(self.verticalSpacer_8, 6, 1, 1, 1)
 
         self.gridLayout_8 = QGridLayout()
         self.gridLayout_8.setSpacing(0)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
+        self.gridLayout_9 = QGridLayout()
+        self.gridLayout_9.setObjectName(u"gridLayout_9")
+        self.lineEdit_pesquisa_id = QLineEdit(self.page_financeiro)
+        self.lineEdit_pesquisa_id.setObjectName(u"lineEdit_pesquisa_id")
+        sizePolicy3.setHeightForWidth(self.lineEdit_pesquisa_id.sizePolicy().hasHeightForWidth())
+        self.lineEdit_pesquisa_id.setSizePolicy(sizePolicy3)
+
+        self.gridLayout_9.addWidget(self.lineEdit_pesquisa_id, 0, 0, 1, 1)
+
+        self.pushButton_4 = QPushButton(self.page_financeiro)
+        self.pushButton_4.setObjectName(u"pushButton_4")
+        self.pushButton_4.setStyleSheet(u"color: white;\n"
+"background-color: rgb(26, 95, 180);")
+
+        self.gridLayout_9.addWidget(self.pushButton_4, 0, 1, 1, 1)
+
+        self.pushButton_7 = QPushButton(self.page_financeiro)
+        self.pushButton_7.setObjectName(u"pushButton_7")
+
+        self.gridLayout_9.addWidget(self.pushButton_7, 0, 2, 1, 1)
+
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_9.addItem(self.horizontalSpacer_5, 0, 5, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_9, 1, 1, 1, 1)
+
         self.gridLayout_10 = QGridLayout()
         self.gridLayout_10.setSpacing(0)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
         self.label_15 = QLabel(self.page_financeiro)
         self.label_15.setObjectName(u"label_15")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.label_15.sizePolicy().hasHeightForWidth())
-        self.label_15.setSizePolicy(sizePolicy2)
+        sizePolicy4.setHeightForWidth(self.label_15.sizePolicy().hasHeightForWidth())
+        self.label_15.setSizePolicy(sizePolicy4)
         self.label_15.setMaximumSize(QSize(16777215, 30))
         self.label_15.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
@@ -444,6 +514,17 @@ class Ui_Principal(object):
 
 
         self.gridLayout_8.addLayout(self.gridLayout_10, 0, 0, 1, 1)
+
+        self.label_16 = QLabel(self.page_financeiro)
+        self.label_16.setObjectName(u"label_16")
+        sizePolicy6 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
+        self.label_16.setSizePolicy(sizePolicy6)
+        self.label_16.setMaximumSize(QSize(16777215, 20))
+
+        self.gridLayout_8.addWidget(self.label_16, 1, 0, 1, 1)
 
         self.gridLayout_nome = QGridLayout()
         self.gridLayout_nome.setSpacing(0)
@@ -455,9 +536,6 @@ class Ui_Principal(object):
 
         self.lineEdit_pesquisa_cliente = QLineEdit(self.page_financeiro)
         self.lineEdit_pesquisa_cliente.setObjectName(u"lineEdit_pesquisa_cliente")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.lineEdit_pesquisa_cliente.sizePolicy().hasHeightForWidth())
         self.lineEdit_pesquisa_cliente.setSizePolicy(sizePolicy3)
         self.lineEdit_pesquisa_cliente.setMinimumSize(QSize(400, 0))
@@ -481,51 +559,8 @@ class Ui_Principal(object):
 
         self.gridLayout_8.addLayout(self.gridLayout_nome, 0, 1, 1, 1)
 
-        self.gridLayout_9 = QGridLayout()
-        self.gridLayout_9.setObjectName(u"gridLayout_9")
-        self.pushButton_7 = QPushButton(self.page_financeiro)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-
-        self.gridLayout_9.addWidget(self.pushButton_7, 0, 2, 1, 1)
-
-        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_9.addItem(self.horizontalSpacer_5, 0, 3, 1, 1)
-
-        self.pushButton_4 = QPushButton(self.page_financeiro)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setStyleSheet(u"color: white;\n"
-"background-color: rgb(26, 95, 180);")
-
-        self.gridLayout_9.addWidget(self.pushButton_4, 0, 1, 1, 1)
-
-        self.lineEdit_pesquisa_id = QLineEdit(self.page_financeiro)
-        self.lineEdit_pesquisa_id.setObjectName(u"lineEdit_pesquisa_id")
-        sizePolicy3.setHeightForWidth(self.lineEdit_pesquisa_id.sizePolicy().hasHeightForWidth())
-        self.lineEdit_pesquisa_id.setSizePolicy(sizePolicy3)
-
-        self.gridLayout_9.addWidget(self.lineEdit_pesquisa_id, 0, 0, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_9, 1, 1, 1, 1)
-
-        self.label_16 = QLabel(self.page_financeiro)
-        self.label_16.setObjectName(u"label_16")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
-        self.label_16.setSizePolicy(sizePolicy4)
-        self.label_16.setMaximumSize(QSize(16777215, 20))
-
-        self.gridLayout_8.addWidget(self.label_16, 1, 0, 1, 1)
-
 
         self.gridLayout_6.addLayout(self.gridLayout_8, 1, 1, 1, 1)
-
-        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_6.addItem(self.horizontalSpacer_4, 5, 1, 1, 1)
 
         self.stacked_principal.addWidget(self.page_financeiro)
         self.page_aluno = QWidget()
@@ -808,9 +843,6 @@ class Ui_Principal(object):
 
         self.label_34 = QLabel(self.pagamento_tab)
         self.label_34.setObjectName(u"label_34")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.label_34.sizePolicy().hasHeightForWidth())
         self.label_34.setSizePolicy(sizePolicy5)
 
@@ -854,6 +886,188 @@ class Ui_Principal(object):
         self.gridLayout_13.addWidget(self.tabWidget, 3, 0, 1, 1)
 
         self.stacked_principal.addWidget(self.page_aluno)
+        self.page_configuracao = QWidget()
+        self.page_configuracao.setObjectName(u"page_configuracao")
+        self.gridLayout_27 = QGridLayout(self.page_configuracao)
+        self.gridLayout_27.setObjectName(u"gridLayout_27")
+        self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_27.addItem(self.verticalSpacer_10, 2, 0, 1, 1)
+
+        self.label_40 = QLabel(self.page_configuracao)
+        self.label_40.setObjectName(u"label_40")
+        self.label_40.setFont(font)
+
+        self.gridLayout_27.addWidget(self.label_40, 0, 0, 1, 1)
+
+        self.tabWidget_2 = QTabWidget(self.page_configuracao)
+        self.tabWidget_2.setObjectName(u"tabWidget_2")
+        self.tab = QWidget()
+        self.tab.setObjectName(u"tab")
+        self.gridLayout_28 = QGridLayout(self.tab)
+        self.gridLayout_28.setObjectName(u"gridLayout_28")
+        self.gridLayout_22 = QGridLayout()
+        self.gridLayout_22.setObjectName(u"gridLayout_22")
+        self.horizontalSpacer_14 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_22.addItem(self.horizontalSpacer_14, 0, 3, 1, 1)
+
+        self.lineEdit = QLineEdit(self.tab)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setMinimumSize(QSize(100, 0))
+        self.lineEdit.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_22.addWidget(self.lineEdit, 0, 2, 1, 1)
+
+        self.label_41 = QLabel(self.tab)
+        self.label_41.setObjectName(u"label_41")
+        self.label_41.setMinimumSize(QSize(180, 0))
+        self.label_41.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_22.addWidget(self.label_41, 0, 0, 1, 1)
+
+        self.label_46 = QLabel(self.tab)
+        self.label_46.setObjectName(u"label_46")
+
+        self.gridLayout_22.addWidget(self.label_46, 0, 1, 1, 1)
+
+
+        self.gridLayout_28.addLayout(self.gridLayout_22, 0, 0, 1, 1)
+
+        self.gridLayout_31 = QGridLayout()
+        self.gridLayout_31.setObjectName(u"gridLayout_31")
+        self.lineEdit_4 = QLineEdit(self.tab)
+        self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.lineEdit_4.setMinimumSize(QSize(100, 0))
+        self.lineEdit_4.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_31.addWidget(self.lineEdit_4, 0, 2, 1, 1)
+
+        self.horizontalSpacer_18 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_31.addItem(self.horizontalSpacer_18, 0, 3, 1, 1)
+
+        self.label_44 = QLabel(self.tab)
+        self.label_44.setObjectName(u"label_44")
+        self.label_44.setMinimumSize(QSize(180, 0))
+        self.label_44.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_31.addWidget(self.label_44, 0, 0, 1, 1)
+
+        self.label_49 = QLabel(self.tab)
+        self.label_49.setObjectName(u"label_49")
+
+        self.gridLayout_31.addWidget(self.label_49, 0, 1, 1, 1)
+
+
+        self.gridLayout_28.addLayout(self.gridLayout_31, 3, 0, 1, 1)
+
+        self.gridLayout_30 = QGridLayout()
+        self.gridLayout_30.setObjectName(u"gridLayout_30")
+        self.lineEdit_3 = QLineEdit(self.tab)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setMinimumSize(QSize(100, 0))
+        self.lineEdit_3.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_30.addWidget(self.lineEdit_3, 0, 2, 1, 1)
+
+        self.horizontalSpacer_17 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_30.addItem(self.horizontalSpacer_17, 0, 3, 1, 1)
+
+        self.label_43 = QLabel(self.tab)
+        self.label_43.setObjectName(u"label_43")
+        self.label_43.setMinimumSize(QSize(180, 0))
+        self.label_43.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_30.addWidget(self.label_43, 0, 0, 1, 1)
+
+        self.label_48 = QLabel(self.tab)
+        self.label_48.setObjectName(u"label_48")
+
+        self.gridLayout_30.addWidget(self.label_48, 0, 1, 1, 1)
+
+
+        self.gridLayout_28.addLayout(self.gridLayout_30, 2, 0, 1, 1)
+
+        self.gridLayout_32 = QGridLayout()
+        self.gridLayout_32.setObjectName(u"gridLayout_32")
+        self.lineEdit_6 = QLineEdit(self.tab)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_6.setMinimumSize(QSize(100, 0))
+        self.lineEdit_6.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_32.addWidget(self.lineEdit_6, 0, 2, 1, 1)
+
+        self.horizontalSpacer_19 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_32.addItem(self.horizontalSpacer_19, 0, 3, 1, 1)
+
+        self.gridLayout_33 = QGridLayout()
+        self.gridLayout_33.setObjectName(u"gridLayout_33")
+        self.pushButton_2 = QPushButton(self.tab)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+
+        self.gridLayout_33.addWidget(self.pushButton_2, 0, 0, 1, 1)
+
+
+        self.gridLayout_32.addLayout(self.gridLayout_33, 1, 2, 1, 1)
+
+        self.label_45 = QLabel(self.tab)
+        self.label_45.setObjectName(u"label_45")
+        self.label_45.setMinimumSize(QSize(180, 0))
+        self.label_45.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_32.addWidget(self.label_45, 0, 0, 1, 1)
+
+        self.label_50 = QLabel(self.tab)
+        self.label_50.setObjectName(u"label_50")
+
+        self.gridLayout_32.addWidget(self.label_50, 0, 1, 1, 1)
+
+
+        self.gridLayout_28.addLayout(self.gridLayout_32, 4, 0, 1, 1)
+
+        self.gridLayout_29 = QGridLayout()
+        self.gridLayout_29.setObjectName(u"gridLayout_29")
+        self.lineEdit_2 = QLineEdit(self.tab)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setMinimumSize(QSize(100, 0))
+        self.lineEdit_2.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_29.addWidget(self.lineEdit_2, 0, 2, 1, 1)
+
+        self.horizontalSpacer_15 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_29.addItem(self.horizontalSpacer_15, 0, 3, 1, 1)
+
+        self.label_42 = QLabel(self.tab)
+        self.label_42.setObjectName(u"label_42")
+        self.label_42.setMinimumSize(QSize(180, 0))
+        self.label_42.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_29.addWidget(self.label_42, 0, 0, 1, 1)
+
+        self.label_47 = QLabel(self.tab)
+        self.label_47.setObjectName(u"label_47")
+
+        self.gridLayout_29.addWidget(self.label_47, 0, 1, 1, 1)
+
+
+        self.gridLayout_28.addLayout(self.gridLayout_29, 1, 0, 1, 1)
+
+        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_28.addItem(self.verticalSpacer_11, 5, 0, 1, 1)
+
+        self.tabWidget_2.addTab(self.tab, "")
+        self.tab_2 = QWidget()
+        self.tab_2.setObjectName(u"tab_2")
+        self.tabWidget_2.addTab(self.tab_2, "")
+
+        self.gridLayout_27.addWidget(self.tabWidget_2, 1, 0, 1, 1)
+
+        self.stacked_principal.addWidget(self.page_configuracao)
 
         self.gridLayout_2.addWidget(self.stacked_principal, 0, 1, 6, 1)
 
@@ -872,13 +1086,13 @@ class Ui_Principal(object):
         self.sidebar_grid.setContentsMargins(0, -1, -1, -1)
         self.button_bar_inicio = QPushButton(self.frame_sidebar)
         self.button_bar_inicio.setObjectName(u"button_bar_inicio")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.button_bar_inicio.sizePolicy().hasHeightForWidth())
-        self.button_bar_inicio.setSizePolicy(sizePolicy6)
-        self.button_bar_inicio.setMinimumSize(QSize(0, 0))
-        self.button_bar_inicio.setMaximumSize(QSize(500, 60))
+        sizePolicy7 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.MinimumExpanding)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.button_bar_inicio.sizePolicy().hasHeightForWidth())
+        self.button_bar_inicio.setSizePolicy(sizePolicy7)
+        self.button_bar_inicio.setMinimumSize(QSize(100, 50))
+        self.button_bar_inicio.setMaximumSize(QSize(100, 60))
         self.button_bar_inicio.setSizeIncrement(QSize(0, 0))
         self.button_bar_inicio.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
@@ -892,12 +1106,29 @@ class Ui_Principal(object):
 
         self.sidebar_grid.addWidget(self.button_bar_inicio, 0, 0, 1, 1)
 
+        self.verticalSpacer = QSpacerItem(20, 600, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.sidebar_grid.addItem(self.verticalSpacer, 5, 0, 1, 1)
+
+        self.button_bar_aluno = QPushButton(self.frame_sidebar)
+        self.button_bar_aluno.setObjectName(u"button_bar_aluno")
+        sizePolicy7.setHeightForWidth(self.button_bar_aluno.sizePolicy().hasHeightForWidth())
+        self.button_bar_aluno.setSizePolicy(sizePolicy7)
+        self.button_bar_aluno.setMinimumSize(QSize(100, 50))
+        self.button_bar_aluno.setMaximumSize(QSize(100, 60))
+        self.button_bar_aluno.setSizeIncrement(QSize(0, 0))
+        self.button_bar_aluno.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
+"border: none;\n"
+"color: white;")
+
+        self.sidebar_grid.addWidget(self.button_bar_aluno, 3, 0, 1, 1)
+
         self.button_bar_cadastrar = QPushButton(self.frame_sidebar)
         self.button_bar_cadastrar.setObjectName(u"button_bar_cadastrar")
-        sizePolicy6.setHeightForWidth(self.button_bar_cadastrar.sizePolicy().hasHeightForWidth())
-        self.button_bar_cadastrar.setSizePolicy(sizePolicy6)
-        self.button_bar_cadastrar.setMinimumSize(QSize(0, 0))
-        self.button_bar_cadastrar.setMaximumSize(QSize(500, 60))
+        sizePolicy7.setHeightForWidth(self.button_bar_cadastrar.sizePolicy().hasHeightForWidth())
+        self.button_bar_cadastrar.setSizePolicy(sizePolicy7)
+        self.button_bar_cadastrar.setMinimumSize(QSize(100, 50))
+        self.button_bar_cadastrar.setMaximumSize(QSize(100, 60))
         self.button_bar_cadastrar.setSizeIncrement(QSize(0, 0))
         self.button_bar_cadastrar.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
@@ -907,10 +1138,10 @@ class Ui_Principal(object):
 
         self.button_bar_financeiro = QPushButton(self.frame_sidebar)
         self.button_bar_financeiro.setObjectName(u"button_bar_financeiro")
-        sizePolicy6.setHeightForWidth(self.button_bar_financeiro.sizePolicy().hasHeightForWidth())
-        self.button_bar_financeiro.setSizePolicy(sizePolicy6)
-        self.button_bar_financeiro.setMinimumSize(QSize(0, 0))
-        self.button_bar_financeiro.setMaximumSize(QSize(500, 60))
+        sizePolicy7.setHeightForWidth(self.button_bar_financeiro.sizePolicy().hasHeightForWidth())
+        self.button_bar_financeiro.setSizePolicy(sizePolicy7)
+        self.button_bar_financeiro.setMinimumSize(QSize(100, 50))
+        self.button_bar_financeiro.setMaximumSize(QSize(100, 60))
         self.button_bar_financeiro.setSizeIncrement(QSize(0, 0))
         self.button_bar_financeiro.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
@@ -918,22 +1149,18 @@ class Ui_Principal(object):
 
         self.sidebar_grid.addWidget(self.button_bar_financeiro, 2, 0, 1, 1)
 
-        self.button_bar_aluno = QPushButton(self.frame_sidebar)
-        self.button_bar_aluno.setObjectName(u"button_bar_aluno")
-        sizePolicy6.setHeightForWidth(self.button_bar_aluno.sizePolicy().hasHeightForWidth())
-        self.button_bar_aluno.setSizePolicy(sizePolicy6)
-        self.button_bar_aluno.setMinimumSize(QSize(0, 0))
-        self.button_bar_aluno.setMaximumSize(QSize(500, 60))
-        self.button_bar_aluno.setSizeIncrement(QSize(0, 0))
-        self.button_bar_aluno.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
+        self.button_bar_configuracao = QPushButton(self.frame_sidebar)
+        self.button_bar_configuracao.setObjectName(u"button_bar_configuracao")
+        sizePolicy7.setHeightForWidth(self.button_bar_configuracao.sizePolicy().hasHeightForWidth())
+        self.button_bar_configuracao.setSizePolicy(sizePolicy7)
+        self.button_bar_configuracao.setMinimumSize(QSize(100, 50))
+        self.button_bar_configuracao.setMaximumSize(QSize(100, 60))
+        self.button_bar_configuracao.setSizeIncrement(QSize(0, 0))
+        self.button_bar_configuracao.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
 "border: none;\n"
 "color: white;")
 
-        self.sidebar_grid.addWidget(self.button_bar_aluno, 3, 0, 1, 1)
-
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.sidebar_grid.addItem(self.verticalSpacer, 4, 0, 1, 1)
+        self.sidebar_grid.addWidget(self.button_bar_configuracao, 4, 0, 1, 1)
 
 
         self.gridLayout_4.addLayout(self.sidebar_grid, 0, 0, 1, 1)
@@ -944,8 +1171,9 @@ class Ui_Principal(object):
 
         self.retranslateUi(Principal)
 
-        self.stacked_principal.setCurrentIndex(2)
+        self.stacked_principal.setCurrentIndex(4)
         self.tabWidget.setCurrentIndex(1)
+        self.tabWidget_2.setCurrentIndex(0)
         self.button_bar_inicio.setDefault(False)
 
 
@@ -984,30 +1212,35 @@ class Ui_Principal(object):
         self.label_14.setText(QCoreApplication.translate("Principal", u"Pagamento:", None))
         self.btn_financeiro_efetuarPagamento.setText(QCoreApplication.translate("Principal", u"Efetuar pagamento", None))
         self.pushButton_5.setText(QCoreApplication.translate("Principal", u"Limpar", None))
+        self.label_13.setText(QCoreApplication.translate("Principal", u" Foto", None))
+        self.label_18.setText(QCoreApplication.translate("Principal", u"CPF:", None))
+        self.label_20.setText(QCoreApplication.translate("Principal", u"Dia do vencimento: ", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("Principal", u"1", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("Principal", u"5", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("Principal", u"10", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("Principal", u"15", None))
+        self.comboBox.setItemText(4, QCoreApplication.translate("Principal", u"20", None))
+        self.comboBox.setItemText(5, QCoreApplication.translate("Principal", u"25", None))
+
+        self.label_19.setText(QCoreApplication.translate("Principal", u"Plano:", None))
+        self.label_17.setText(QCoreApplication.translate("Principal", u"Nome:", None))
+        self.label_39.setText("")
+        self.dateEdit_2.setDisplayFormat(QCoreApplication.translate("Principal", u"dd", None))
+        self.label_24.setText(QCoreApplication.translate("Principal", u"Valor a pagar:", None))
+        self.label_38.setText(QCoreApplication.translate("Principal", u"Desconto: ", None))
         self.comboBox_financeiro_plano.setItemText(0, QCoreApplication.translate("Principal", u"Diario", None))
         self.comboBox_financeiro_plano.setItemText(1, QCoreApplication.translate("Principal", u"Mensal", None))
         self.comboBox_financeiro_plano.setItemText(2, QCoreApplication.translate("Principal", u"Trimestral", None))
         self.comboBox_financeiro_plano.setItemText(3, QCoreApplication.translate("Principal", u"Semestral", None))
         self.comboBox_financeiro_plano.setItemText(4, QCoreApplication.translate("Principal", u"Anual", None))
 
-        self.dateEdit_financeiro_vencimento.setDisplayFormat(QCoreApplication.translate("Principal", u"d", None))
-        self.comboBox_financeiro_status.setItemText(0, QCoreApplication.translate("Principal", u"Ativo", None))
-        self.comboBox_financeiro_status.setItemText(1, QCoreApplication.translate("Principal", u"Inativo", None))
-        self.comboBox_financeiro_status.setItemText(2, QCoreApplication.translate("Principal", u"Em debito", None))
-
-        self.label_17.setText(QCoreApplication.translate("Principal", u"Nome:", None))
-        self.label_19.setText(QCoreApplication.translate("Principal", u"Plano:", None))
-        self.label_18.setText(QCoreApplication.translate("Principal", u"CPF:", None))
-        self.label_20.setText(QCoreApplication.translate("Principal", u"Vencimento:", None))
         self.label_21.setText(QCoreApplication.translate("Principal", u"Status:", None))
-        self.label_24.setText(QCoreApplication.translate("Principal", u"Valor a pagar:", None))
-        self.label_13.setText(QCoreApplication.translate("Principal", u" Foto", None))
+        self.pushButton_4.setText(QCoreApplication.translate("Principal", u"Pesquisar", None))
+        self.pushButton_7.setText(QCoreApplication.translate("Principal", u"Limpar", None))
         self.label_15.setText(QCoreApplication.translate("Principal", u"Nome: ", None))
+        self.label_16.setText(QCoreApplication.translate("Principal", u"Matricula: ", None))
         self.pushButton_6.setText(QCoreApplication.translate("Principal", u"Limpar", None))
         self.btn_financeiro_pesquisar.setText(QCoreApplication.translate("Principal", u"Pesquisar", None))
-        self.pushButton_7.setText(QCoreApplication.translate("Principal", u"Limpar", None))
-        self.pushButton_4.setText(QCoreApplication.translate("Principal", u"Pesquisar", None))
-        self.label_16.setText(QCoreApplication.translate("Principal", u"Matricula: ", None))
         self.pushButton_8.setText(QCoreApplication.translate("Principal", u"Buscar", None))
         self.btn_aluno_pesquisa.setText(QCoreApplication.translate("Principal", u"Buscar", None))
         self.label_23.setText(QCoreApplication.translate("Principal", u"Matricula", None))
@@ -1045,10 +1278,30 @@ class Ui_Principal(object):
         self.dateEdit.setDisplayFormat(QCoreApplication.translate("Principal", u"dd", None))
         self.pushButton_13.setText(QCoreApplication.translate("Principal", u"Salvar", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.pagamento_tab), QCoreApplication.translate("Principal", u"Plano", None))
+        self.label_40.setText(QCoreApplication.translate("Principal", u"Configura\u00e7\u00e3o:", None))
+        self.lineEdit.setText(QCoreApplication.translate("Principal", u"6,23", None))
+        self.label_41.setText(QCoreApplication.translate("Principal", u"Valor da Tarifa Diaria: ", None))
+        self.label_46.setText(QCoreApplication.translate("Principal", u"R$ ", None))
+        self.lineEdit_4.setText(QCoreApplication.translate("Principal", u"520,00", None))
+        self.label_44.setText(QCoreApplication.translate("Principal", u"Valor da Tarifa Semestral: ", None))
+        self.label_49.setText(QCoreApplication.translate("Principal", u"R$ ", None))
+        self.lineEdit_3.setText(QCoreApplication.translate("Principal", u"280,00", None))
+        self.label_43.setText(QCoreApplication.translate("Principal", u"Valor da Tarifa Trimestral: ", None))
+        self.label_48.setText(QCoreApplication.translate("Principal", u"R$ ", None))
+        self.lineEdit_6.setText(QCoreApplication.translate("Principal", u"1000,00", None))
+        self.pushButton_2.setText(QCoreApplication.translate("Principal", u"Salvar", None))
+        self.label_45.setText(QCoreApplication.translate("Principal", u"Valor da Tarifa Anual: ", None))
+        self.label_50.setText(QCoreApplication.translate("Principal", u"R$ ", None))
+        self.lineEdit_2.setText(QCoreApplication.translate("Principal", u"100,00", None))
+        self.label_42.setText(QCoreApplication.translate("Principal", u"Valor da Tarifa Mensal: ", None))
+        self.label_47.setText(QCoreApplication.translate("Principal", u"R$ ", None))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab), QCoreApplication.translate("Principal", u"Tarifas Cobradas", None))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_2), QCoreApplication.translate("Principal", u"Tab 2", None))
         self.button_bar_inicio.setText(QCoreApplication.translate("Principal", u"Inicio", None))
+        self.button_bar_aluno.setText(QCoreApplication.translate("Principal", u"Aluno", None))
         self.button_bar_cadastrar.setText(QCoreApplication.translate("Principal", u"Cadastro", None))
         self.button_bar_financeiro.setText(QCoreApplication.translate("Principal", u"Financeiro", None))
-        self.button_bar_aluno.setText(QCoreApplication.translate("Principal", u"Aluno", None))
+        self.button_bar_configuracao.setText(QCoreApplication.translate("Principal", u"Configura\u00e7\u00e3o", None))
         pass
     # retranslateUi
 

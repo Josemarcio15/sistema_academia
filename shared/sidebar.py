@@ -4,7 +4,7 @@ from pages.home import Home
 from pages.cadastro_clientes import CadastroClientes
 from pages.financeiro import Financeiro
 from pages.aluno import Aluno
-
+from pages.configuracao import Configuracao
 
 class Sidebar(QWidget):
     def __init__(self, parent=None):
@@ -20,6 +20,7 @@ class Sidebar(QWidget):
         self.ui.button_bar_cadastrar.clicked.connect(lambda: self.carregar_pagina(1, CadastroClientes))
         self.ui.button_bar_financeiro.clicked.connect(lambda: self.carregar_pagina(2, Financeiro))
         self.ui.button_bar_aluno.clicked.connect(lambda: self.carregar_pagina(3, Aluno))
+        self.ui.button_bar_configuracao.clicked.connect(lambda: self.carregar_pagina(4, Configuracao))
 
     def carregar_pagina(self, indice, classe):
         # Define a página atual
@@ -34,4 +35,4 @@ class Sidebar(QWidget):
             widget_pagina = self.ui.stacked_principal.widget(indice)
 
         # Acesso à instância da página (sem recriar)
-        pagina_atual = self.pagina_instances[indice]
+        #pagina_atual = self.pagina_instances[indice]

@@ -18,6 +18,7 @@
         "criar_db.py",
         "README.md",
         ".gitignore",
-        "shared/validar_dados_cliente.py"
+        "shared/validar_dados_cliente.py",
+        "pages/configuracao.py"
     ]
 }

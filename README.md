@@ -6,9 +6,9 @@
     sudo apt install mysql-server
 
     criar um .env com seguintes variaveis
-        DB_USER = "usuario_definido"
-        DB_PASSWORD = "senha_definida_banco"
+        DB_USER = "root"
+        DB_PASSWORD = "Amagedom12"
         DB_HOST = "localhost"
-        DB_NAME = "nome_do_banco"
+        DB_NAME = "sys_db"
     executar script criar_db.py para criar as tabelas necessarias para
     o banco de dados
