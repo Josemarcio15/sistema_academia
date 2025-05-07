@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QLineEdit, QPushButton, QCompleter, QComboBox, QDateEdit
+from PySide6.QtWidgets import QLineEdit, QPushButton, QCompleter, QComboBox, QDateEdit, QLabel
 from PySide6.QtCore import QStringListModel, Qt
 from db.queries import obter_clientes_por_nome, obter_id_cliente
 
@@ -14,7 +14,7 @@ class Financeiro:
         self.cpf = self.ui.findChild(QLineEdit, "lineEdit_financeiro_cpf")
         self.valor_a_pagar = self.ui.findChild(QLineEdit, "lineEdit_financeiro_valorApagar")
         self.plano = self.ui.findChild(QComboBox, "comboBox_financeiro_plano")
-        self.status = self.ui.findChild(QComboBox, "comboBox_financeiro_status")
+        self.status = self.ui.findChild(QLabel, "label_financeiro_status")
         self.vencimento = self.ui.findChild(QDateEdit, "dateEdit_financeiro_vencimento")
 
 
@@ -60,23 +60,25 @@ class Financeiro:
                 aluno["id"],
                 aluno["nome"],
                 aluno["cpf"],
-                aluno["data_nascimento"],
-                aluno["email"],
-                aluno["telefone"],
-                aluno["endereco"],
-                aluno["bairro"],
-                aluno["numero"],
-                aluno["complemento"],
-                aluno["sexo"]
+                aluno["ativo"]
+                #aluno["data_nascimento"],
+                #aluno["email"],
+                #aluno["telefone"],
+                #aluno["endereco"],
+                #aluno["bairro"],
+                #aluno["numero"],
+                #aluno["complemento"],
+                #aluno["sexo"]
             )
         
 
-    def mostrar_dados_aluno(self, matricula, nome, cpf, email, telefone, endereco, bairro, numero, complemento, sexo):
+    def mostrar_dados_aluno(self, matricula, nome, cpf, status):
         
 
-        self.campo_pesquisa_matricula.setText(matricula)
+        self.campo_pesquisa_matricula.setText(str(matricula))
         self.nome.setText(nome)
         self.cpf.setText(cpf)
+        self.status.setText(str(status))
         
 
     

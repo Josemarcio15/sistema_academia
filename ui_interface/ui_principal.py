@@ -388,21 +388,21 @@ class Ui_Principal(object):
 
         self.gridLayout_11.addWidget(self.label_17, 0, 0, 1, 1)
 
-        self.label_39 = QLabel(self.page_financeiro)
-        self.label_39.setObjectName(u"label_39")
+        self.label_financeiro_status = QLabel(self.page_financeiro)
+        self.label_financeiro_status.setObjectName(u"label_financeiro_status")
         sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
         sizePolicy5.setHorizontalStretch(0)
         sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.label_39.sizePolicy().hasHeightForWidth())
-        self.label_39.setSizePolicy(sizePolicy5)
-        self.label_39.setMinimumSize(QSize(70, 0))
-        self.label_39.setMaximumSize(QSize(70, 16777215))
-        self.label_39.setFrameShape(QFrame.Shape.StyledPanel)
-        self.label_39.setFrameShadow(QFrame.Shadow.Sunken)
-        self.label_39.setLineWidth(10)
-        self.label_39.setMidLineWidth(10)
+        sizePolicy5.setHeightForWidth(self.label_financeiro_status.sizePolicy().hasHeightForWidth())
+        self.label_financeiro_status.setSizePolicy(sizePolicy5)
+        self.label_financeiro_status.setMinimumSize(QSize(70, 0))
+        self.label_financeiro_status.setMaximumSize(QSize(70, 16777215))
+        self.label_financeiro_status.setFrameShape(QFrame.Shape.StyledPanel)
+        self.label_financeiro_status.setFrameShadow(QFrame.Shadow.Sunken)
+        self.label_financeiro_status.setLineWidth(10)
+        self.label_financeiro_status.setMidLineWidth(10)
 
-        self.gridLayout_11.addWidget(self.label_39, 1, 1, 1, 1)
+        self.gridLayout_11.addWidget(self.label_financeiro_status, 1, 1, 1, 1)
 
         self.gridLayout_21 = QGridLayout()
         self.gridLayout_21.setObjectName(u"gridLayout_21")
@@ -1171,8 +1171,8 @@ class Ui_Principal(object):
 
         self.retranslateUi(Principal)
 
-        self.stacked_principal.setCurrentIndex(4)
-        self.tabWidget.setCurrentIndex(1)
+        self.stacked_principal.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.button_bar_inicio.setDefault(False)
 
@@ -1224,7 +1224,7 @@ class Ui_Principal(object):
 
         self.label_19.setText(QCoreApplication.translate("Principal", u"Plano:", None))
         self.label_17.setText(QCoreApplication.translate("Principal", u"Nome:", None))
-        self.label_39.setText("")
+        self.label_financeiro_status.setText("")
         self.dateEdit_2.setDisplayFormat(QCoreApplication.translate("Principal", u"dd", None))
         self.label_24.setText(QCoreApplication.translate("Principal", u"Valor a pagar:", None))
         self.label_38.setText(QCoreApplication.translate("Principal", u"Desconto: ", None))
