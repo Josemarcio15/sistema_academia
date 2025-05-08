@@ -4,7 +4,7 @@ import mysql.connector
 DB_USER = "root"
 DB_PASSWORD = "Amagedom12"
 DB_HOST = "localhost"
-DB_NAME = "sys_teste"
+DB_NAME = "sys_db"
 
 def criar_conexao():
     """
@@ -67,7 +67,7 @@ def criar_banco_e_tabelas():
             email VARCHAR(255),
             telefone VARCHAR(20),
             complemento TEXT,
-            ativo BOOLEAN DEFAULT TRUE,
+            ativo BOOLEAN DEFAULT FALSE,
             plano ENUM('DIARIO', 'MENSAL', 'TRIMESTRAL', 'ANUAL', 'NENHUM') DEFAULT 'NENHUM',
             data_inicio_pagamento DATE,
             dia_pagamento ENUM('1', '5', '10', '15', '20', '25'),

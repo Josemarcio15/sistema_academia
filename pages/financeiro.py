@@ -10,18 +10,21 @@ class Financeiro:
         self.ui.findChild(QPushButton, "btn_financeiro_pesquisar").clicked.connect(self.pesquisa_aluno)
         self.ui.findChild(QPushButton, "btn_financeiro_efetuarPagamento").clicked.connect(self.efetuar_pagamento)
 
+        self.dias_a_pagar = self.ui.findChild(QDateEdit, "dateEdit_financeiro_dias")
+
         self.campo_pesquisa_matricula = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_id")
         self.campo_pesquisa = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_cliente")
         self.nome = self.ui.findChild(QLineEdit, "lineEdit_financeiro_nome")
         self.cpf = self.ui.findChild(QLineEdit, "lineEdit_financeiro_cpf")
         self.valor_a_pagar = self.ui.findChild(QLineEdit, "lineEdit_financeiro_valorApagar")
 
-        self.data_vencimento = self.ui.findChild(QComboBox, "comboBox_financeiro_diaVencimento")
+        self.data_vencimento = self.ui.findChild(QLabel, "label_financeiro_vencimento")
         self.plano = self.ui.findChild(QComboBox, "comboBox_financeiro_plano")
 
         self.status = self.ui.findChild(QLabel, "label_financeiro_status")
-        self.vencimento = self.ui.findChild(QDateEdit, "dateEdit_financeiro_vencimento")
 
+        #ativar o dateEdit
+        self.plano.currentTextChanged.connect(self.verificar_plano_diario)
 
         #autoComplete
         self.modelo_completer = QStringListModel()
@@ -35,6 +38,15 @@ class Financeiro:
 
         self.campo_pesquisa.textChanged.connect(self.atualizar_sugestoes)
         self.campo_pesquisa_matricula.textChanged.connect(self.pesquisa_id)
+
+    def verificar_plano_diario(self, combox_diario):
+        if combox_diario == "Diario":
+            self.dias_a_pagar.setEnabled(True)
+        else:
+            self.dias_a_pagar.setEnabled(False)
+
+
+
 
     def atualizar_sugestoes(self, texto):
         if texto:
@@ -65,20 +77,13 @@ class Financeiro:
                 aluno["id"],
                 aluno["nome"],
                 aluno["cpf"],
-                aluno["ativo"]
-                #aluno["data_nascimento"],
-                #aluno["email"],
-                #aluno["telefone"],
-                #aluno["endereco"],
-                #aluno["bairro"],
-                #aluno["numero"],
-                #aluno["complemento"],
-                #aluno["sexo"]
+                aluno["ativo"],
+                aluno["data_vencimento"]
             )
         
 
-    def mostrar_dados_aluno(self, matricula, nome, cpf, ativo):
-        
+    def mostrar_dados_aluno(self, matricula, nome, cpf, ativo, data_vencimento):
+        data_formatada = datetime.strptime(str(data_vencimento), "%Y-%m-%d").strftime("%d/%m/%Y")
 
         self.campo_pesquisa_matricula.setText(str(matricula))
         self.nome.setText(nome)
@@ -87,22 +92,23 @@ class Financeiro:
             self.status.setText("Ativo")
         else:
             self.status.setText("Inativo")
+        self.data_vencimento.setText(str(data_formatada))
 
         
 
     
     def efetuar_pagamento(self):
-        try:
-            data_hoje = datetime.now().strftime("%Y-%m-%d")
-            id_aluno = int(self.campo_pesquisa_matricula.text())
-            campos = {
-            "dia_pagamento": self.data_vencimento.currentText(),
-            "plano": self.plano.currentText(),
-            "data_pagamento": data_hoje
-            }
-            print(campos)
-        except Exception as e:
-            print(e)
+        pass
+    #     try:
+    #         data_hoje = datetime.now().strftime("%Y-%m-%d")
+    #         id_aluno = int(self.campo_pesquisa_matricula.text())
+    #         campos = {
+    #         "plano": self.plano.currentText(),
+    #         "data_pagamento": data_hoje
+    #         }
+    #         print(campos)
+    #     except Exception as e:
+    #         print(e)
 
     # def editar_aluno(self):
     #     try:

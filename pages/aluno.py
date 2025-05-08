@@ -11,6 +11,7 @@ class Aluno:
         self.campo_pesquisa = self.ui.findChild(QLineEdit, "lineEdit_aluno_pesquisa_nome")
         self.ui.findChild(QPushButton, "btn_aluno_pesquisa").clicked.connect(self.pesquisa_aluno)
         self.ui.findChild(QPushButton, "btn_aluno_salvar").clicked.connect(self.editar_aluno)
+        self.ui.findChild(QPushButton, "btn_aluno_plano_salvar").clicked.connect(self.editar_plano_aluno)
 
         self.matricula = self.ui.findChild(QLineEdit, "lineEdit_aluno_matricula")
         self.nome = self.ui.findChild(QLineEdit, "lineEdit_aluno_nome")
@@ -22,7 +23,10 @@ class Aluno:
         self.bairro = self.ui.findChild(QLineEdit, "lineEdit_aluno_bairro")
         self.numero = self.ui.findChild(QLineEdit, "lineEdit_aluno_numero")
         self.complemento = self.ui.findChild(QLineEdit, "lineEdit_aluno_complemento")
+
         self.sexo = self.ui.findChild(QComboBox, "comboBox_aluno_sexo")
+        self.tipo_de_plano = self.ui.findChild(QComboBox, "comboBox_aluno_tipoDePlano")
+        self.dia_do_pagamento = self.ui.findChild(QComboBox, "comboBox_diaDoPagamento")
 
         # configurando autocompleter
         self.modelo_completer = QStringListModel()
@@ -76,11 +80,11 @@ class Aluno:
         self.numero.setText(str(numero))
         self.complemento.setText(complemento)
         if sexo == "M":
-            self.sexo.setCurrentIndex(0)
-        elif sexo == "F":
             self.sexo.setCurrentIndex(1)
-        elif sexo == "O":
+        elif sexo == "F":
             self.sexo.setCurrentIndex(2)
+        elif sexo == "O":
+            self.sexo.setCurrentIndex(3)
 
     
 
@@ -98,6 +102,18 @@ class Aluno:
                 "numero": self.numero.text(),
                 "complemento": self.complemento.text(),
                 "sexo": self.sexo.currentText()[0]
+            }
+            sucesso = atualizar_cliente(id_cliente, campos)
+            print("Atualização realizada com sucesso" if sucesso else "Falha na atualização")
+        except Exception as e:
+            print(f"Erro ao editar aluno: {e}")
+
+    def editar_plano_aluno(self):
+        try:
+            id_cliente = int(self.matricula.text())
+            campos = {
+                "plano": self.tipo_de_plano.currentText(),
+                "dia_pagamento": self.dia_do_pagamento.currentText()
             }
             sucesso = atualizar_cliente(id_cliente, campos)
             print("Atualização realizada com sucesso" if sucesso else "Falha na atualização")
