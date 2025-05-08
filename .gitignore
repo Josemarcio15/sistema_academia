@@ -1,6 +1,6 @@
 .qtcreator/
 __pycache__/
 class_interface/__pycache__/
-PyAcademia.pyproject.user
+PyAcademia.pyproject.*
 pages/__pycache__/
 .env
