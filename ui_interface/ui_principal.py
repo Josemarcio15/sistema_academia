@@ -15,10 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDateTimeEdit,
-    QFrame, QGridLayout, QLabel, QLayout,
-    QLineEdit, QPushButton, QSizePolicy, QSpacerItem,
-    QStackedWidget, QTabWidget, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
+    QGridLayout, QLabel, QLayout, QLineEdit,
+    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
+    QTabWidget, QWidget)
 
 class Ui_Principal(object):
     def setupUi(self, Principal):
@@ -357,16 +357,16 @@ class Ui_Principal(object):
 
         self.gridLayout_19.addWidget(self.label_20, 0, 3, 1, 1)
 
-        self.comboBox = QComboBox(self.page_financeiro)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox_financeiro_diaVencimento = QComboBox(self.page_financeiro)
+        self.comboBox_financeiro_diaVencimento.addItem("")
+        self.comboBox_financeiro_diaVencimento.addItem("")
+        self.comboBox_financeiro_diaVencimento.addItem("")
+        self.comboBox_financeiro_diaVencimento.addItem("")
+        self.comboBox_financeiro_diaVencimento.addItem("")
+        self.comboBox_financeiro_diaVencimento.addItem("")
+        self.comboBox_financeiro_diaVencimento.setObjectName(u"comboBox_financeiro_diaVencimento")
 
-        self.gridLayout_19.addWidget(self.comboBox, 0, 4, 1, 1)
+        self.gridLayout_19.addWidget(self.comboBox_financeiro_diaVencimento, 0, 4, 1, 1)
 
 
         self.gridLayout_11.addLayout(self.gridLayout_19, 2, 1, 1, 1)
@@ -567,57 +567,74 @@ class Ui_Principal(object):
         self.page_aluno.setObjectName(u"page_aluno")
         self.gridLayout_13 = QGridLayout(self.page_aluno)
         self.gridLayout_13.setObjectName(u"gridLayout_13")
-        self.gridLayout_12 = QGridLayout()
-        self.gridLayout_12.setObjectName(u"gridLayout_12")
-        self.gridLayout_14 = QGridLayout()
-        self.gridLayout_14.setObjectName(u"gridLayout_14")
-        self.pushButton_8 = QPushButton(self.page_aluno)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        sizePolicy3.setHeightForWidth(self.pushButton_8.sizePolicy().hasHeightForWidth())
-        self.pushButton_8.setSizePolicy(sizePolicy3)
-        self.pushButton_8.setStyleSheet(u"color: white;\n"
-"background-color: rgb(26, 95, 180);")
-
-        self.gridLayout_14.addWidget(self.pushButton_8, 3, 1, 1, 1)
-
-        self.btn_aluno_pesquisa = QPushButton(self.page_aluno)
-        self.btn_aluno_pesquisa.setObjectName(u"btn_aluno_pesquisa")
-        sizePolicy3.setHeightForWidth(self.btn_aluno_pesquisa.sizePolicy().hasHeightForWidth())
-        self.btn_aluno_pesquisa.setSizePolicy(sizePolicy3)
-        self.btn_aluno_pesquisa.setStyleSheet(u"color: white;\n"
-"background-color: rgb(26, 95, 180);")
-
-        self.gridLayout_14.addWidget(self.btn_aluno_pesquisa, 1, 1, 1, 1)
-
-        self.label_23 = QLabel(self.page_aluno)
-        self.label_23.setObjectName(u"label_23")
-
-        self.gridLayout_14.addWidget(self.label_23, 2, 0, 1, 1)
-
-        self.label_22 = QLabel(self.page_aluno)
-        self.label_22.setObjectName(u"label_22")
-
-        self.gridLayout_14.addWidget(self.label_22, 0, 0, 1, 1)
-
-        self.lineEdit_5 = QLineEdit(self.page_aluno)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
-        self.lineEdit_5.setMaximumSize(QSize(200, 16777215))
-
-        self.gridLayout_14.addWidget(self.lineEdit_5, 2, 1, 1, 1)
-
-        self.lineEdit_aluno_pesquisa_nome = QLineEdit(self.page_aluno)
-        self.lineEdit_aluno_pesquisa_nome.setObjectName(u"lineEdit_aluno_pesquisa_nome")
-
-        self.gridLayout_14.addWidget(self.lineEdit_aluno_pesquisa_nome, 0, 1, 1, 1)
-
-
-        self.gridLayout_12.addLayout(self.gridLayout_14, 0, 0, 1, 1)
-
-
-        self.gridLayout_13.addLayout(self.gridLayout_12, 0, 0, 1, 1)
-
         self.tabWidget = QTabWidget(self.page_aluno)
         self.tabWidget.setObjectName(u"tabWidget")
+        self.pagamento_tab = QWidget()
+        self.pagamento_tab.setObjectName(u"pagamento_tab")
+        self.gridLayout_20 = QGridLayout(self.pagamento_tab)
+        self.gridLayout_20.setObjectName(u"gridLayout_20")
+        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_20.addItem(self.horizontalSpacer_10, 0, 2, 1, 1)
+
+        self.pagamento_tab_grid = QGridLayout()
+        self.pagamento_tab_grid.setObjectName(u"pagamento_tab_grid")
+        self.pagamento_tab_grid.setHorizontalSpacing(0)
+        self.pagamento_tab_grid.setVerticalSpacing(6)
+        self.pushButton_13 = QPushButton(self.pagamento_tab)
+        self.pushButton_13.setObjectName(u"pushButton_13")
+        self.pushButton_13.setStyleSheet(u"color: white;\n"
+"background-color: rgb(26, 95, 180);")
+
+        self.pagamento_tab_grid.addWidget(self.pushButton_13, 2, 0, 1, 1)
+
+        self.label_35 = QLabel(self.pagamento_tab)
+        self.label_35.setObjectName(u"label_35")
+
+        self.pagamento_tab_grid.addWidget(self.label_35, 1, 0, 1, 1)
+
+        self.label_34 = QLabel(self.pagamento_tab)
+        self.label_34.setObjectName(u"label_34")
+        sizePolicy5.setHeightForWidth(self.label_34.sizePolicy().hasHeightForWidth())
+        self.label_34.setSizePolicy(sizePolicy5)
+
+        self.pagamento_tab_grid.addWidget(self.label_34, 0, 0, 1, 1)
+
+        self.comboBox_3 = QComboBox(self.pagamento_tab)
+        self.comboBox_3.addItem("")
+        self.comboBox_3.addItem("")
+        self.comboBox_3.addItem("")
+        self.comboBox_3.addItem("")
+        self.comboBox_3.addItem("")
+        self.comboBox_3.addItem("")
+        self.comboBox_3.setObjectName(u"comboBox_3")
+        sizePolicy3.setHeightForWidth(self.comboBox_3.sizePolicy().hasHeightForWidth())
+        self.comboBox_3.setSizePolicy(sizePolicy3)
+        self.comboBox_3.setMinimumSize(QSize(100, 0))
+
+        self.pagamento_tab_grid.addWidget(self.comboBox_3, 0, 1, 1, 1)
+
+        self.comboBox = QComboBox(self.pagamento_tab)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.pagamento_tab_grid.addWidget(self.comboBox, 1, 1, 1, 1)
+
+
+        self.gridLayout_20.addLayout(self.pagamento_tab_grid, 3, 1, 1, 1)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_20.addItem(self.verticalSpacer_9, 4, 0, 1, 1)
+
+        self.tabWidget.addTab(self.pagamento_tab, "")
         self.Perfil_tab = QWidget()
         self.Perfil_tab.setObjectName(u"Perfil_tab")
         self.gridLayout_16 = QGridLayout(self.Perfil_tab)
@@ -711,6 +728,7 @@ class Ui_Principal(object):
         self.gridLayout_17.addWidget(self.label_2, 0, 0, 1, 1)
 
         self.comboBox_aluno_sexo = QComboBox(self.Perfil_tab)
+        self.comboBox_aluno_sexo.addItem("")
         self.comboBox_aluno_sexo.addItem("")
         self.comboBox_aluno_sexo.addItem("")
         self.comboBox_aluno_sexo.addItem("")
@@ -828,62 +846,57 @@ class Ui_Principal(object):
         self.gridLayout_16.addLayout(self.gridLayout_17, 1, 0, 1, 1)
 
         self.tabWidget.addTab(self.Perfil_tab, "")
-        self.pagamento_tab = QWidget()
-        self.pagamento_tab.setObjectName(u"pagamento_tab")
-        self.gridLayout_20 = QGridLayout(self.pagamento_tab)
-        self.gridLayout_20.setObjectName(u"gridLayout_20")
-        self.label_35 = QLabel(self.pagamento_tab)
-        self.label_35.setObjectName(u"label_35")
-
-        self.gridLayout_20.addWidget(self.label_35, 1, 0, 1, 1)
-
-        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_20.addItem(self.verticalSpacer_9, 3, 0, 1, 1)
-
-        self.label_34 = QLabel(self.pagamento_tab)
-        self.label_34.setObjectName(u"label_34")
-        sizePolicy5.setHeightForWidth(self.label_34.sizePolicy().hasHeightForWidth())
-        self.label_34.setSizePolicy(sizePolicy5)
-
-        self.gridLayout_20.addWidget(self.label_34, 0, 0, 1, 1)
-
-        self.comboBox_3 = QComboBox(self.pagamento_tab)
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.setObjectName(u"comboBox_3")
-        sizePolicy3.setHeightForWidth(self.comboBox_3.sizePolicy().hasHeightForWidth())
-        self.comboBox_3.setSizePolicy(sizePolicy3)
-        self.comboBox_3.setMinimumSize(QSize(100, 0))
-
-        self.gridLayout_20.addWidget(self.comboBox_3, 0, 1, 1, 1)
-
-        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_20.addItem(self.horizontalSpacer_10, 0, 2, 1, 1)
-
-        self.dateEdit = QDateEdit(self.pagamento_tab)
-        self.dateEdit.setObjectName(u"dateEdit")
-        self.dateEdit.setMaximumDate(QDate(9999, 12, 30))
-        self.dateEdit.setCurrentSection(QDateTimeEdit.Section.DaySection)
-        self.dateEdit.setCalendarPopup(True)
-
-        self.gridLayout_20.addWidget(self.dateEdit, 1, 1, 1, 1)
-
-        self.pushButton_13 = QPushButton(self.pagamento_tab)
-        self.pushButton_13.setObjectName(u"pushButton_13")
-        self.pushButton_13.setStyleSheet(u"color: white;\n"
-"background-color: rgb(26, 95, 180);")
-
-        self.gridLayout_20.addWidget(self.pushButton_13, 2, 1, 1, 1)
-
-        self.tabWidget.addTab(self.pagamento_tab, "")
 
         self.gridLayout_13.addWidget(self.tabWidget, 3, 0, 1, 1)
+
+        self.gridLayout_12 = QGridLayout()
+        self.gridLayout_12.setObjectName(u"gridLayout_12")
+        self.gridLayout_14 = QGridLayout()
+        self.gridLayout_14.setObjectName(u"gridLayout_14")
+        self.pushButton_8 = QPushButton(self.page_aluno)
+        self.pushButton_8.setObjectName(u"pushButton_8")
+        sizePolicy3.setHeightForWidth(self.pushButton_8.sizePolicy().hasHeightForWidth())
+        self.pushButton_8.setSizePolicy(sizePolicy3)
+        self.pushButton_8.setStyleSheet(u"color: white;\n"
+"background-color: rgb(26, 95, 180);")
+
+        self.gridLayout_14.addWidget(self.pushButton_8, 3, 1, 1, 1)
+
+        self.btn_aluno_pesquisa = QPushButton(self.page_aluno)
+        self.btn_aluno_pesquisa.setObjectName(u"btn_aluno_pesquisa")
+        sizePolicy3.setHeightForWidth(self.btn_aluno_pesquisa.sizePolicy().hasHeightForWidth())
+        self.btn_aluno_pesquisa.setSizePolicy(sizePolicy3)
+        self.btn_aluno_pesquisa.setStyleSheet(u"color: white;\n"
+"background-color: rgb(26, 95, 180);")
+
+        self.gridLayout_14.addWidget(self.btn_aluno_pesquisa, 1, 1, 1, 1)
+
+        self.label_23 = QLabel(self.page_aluno)
+        self.label_23.setObjectName(u"label_23")
+
+        self.gridLayout_14.addWidget(self.label_23, 2, 0, 1, 1)
+
+        self.label_22 = QLabel(self.page_aluno)
+        self.label_22.setObjectName(u"label_22")
+
+        self.gridLayout_14.addWidget(self.label_22, 0, 0, 1, 1)
+
+        self.lineEdit_5 = QLineEdit(self.page_aluno)
+        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.lineEdit_5.setMaximumSize(QSize(200, 16777215))
+
+        self.gridLayout_14.addWidget(self.lineEdit_5, 2, 1, 1, 1)
+
+        self.lineEdit_aluno_pesquisa_nome = QLineEdit(self.page_aluno)
+        self.lineEdit_aluno_pesquisa_nome.setObjectName(u"lineEdit_aluno_pesquisa_nome")
+
+        self.gridLayout_14.addWidget(self.lineEdit_aluno_pesquisa_nome, 0, 1, 1, 1)
+
+
+        self.gridLayout_12.addLayout(self.gridLayout_14, 0, 0, 1, 1)
+
+
+        self.gridLayout_13.addLayout(self.gridLayout_12, 0, 0, 1, 1)
 
         self.stacked_principal.addWidget(self.page_aluno)
         self.page_configuracao = QWidget()
@@ -1171,7 +1184,7 @@ class Ui_Principal(object):
 
         self.retranslateUi(Principal)
 
-        self.stacked_principal.setCurrentIndex(2)
+        self.stacked_principal.setCurrentIndex(3)
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.button_bar_inicio.setDefault(False)
@@ -1215,12 +1228,12 @@ class Ui_Principal(object):
         self.label_13.setText(QCoreApplication.translate("Principal", u" Foto", None))
         self.label_18.setText(QCoreApplication.translate("Principal", u"CPF:", None))
         self.label_20.setText(QCoreApplication.translate("Principal", u"Dia do vencimento: ", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("Principal", u"1", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("Principal", u"5", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("Principal", u"10", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("Principal", u"15", None))
-        self.comboBox.setItemText(4, QCoreApplication.translate("Principal", u"20", None))
-        self.comboBox.setItemText(5, QCoreApplication.translate("Principal", u"25", None))
+        self.comboBox_financeiro_diaVencimento.setItemText(0, QCoreApplication.translate("Principal", u"1", None))
+        self.comboBox_financeiro_diaVencimento.setItemText(1, QCoreApplication.translate("Principal", u"5", None))
+        self.comboBox_financeiro_diaVencimento.setItemText(2, QCoreApplication.translate("Principal", u"10", None))
+        self.comboBox_financeiro_diaVencimento.setItemText(3, QCoreApplication.translate("Principal", u"15", None))
+        self.comboBox_financeiro_diaVencimento.setItemText(4, QCoreApplication.translate("Principal", u"20", None))
+        self.comboBox_financeiro_diaVencimento.setItemText(5, QCoreApplication.translate("Principal", u"25", None))
 
         self.label_19.setText(QCoreApplication.translate("Principal", u"Plano:", None))
         self.label_17.setText(QCoreApplication.translate("Principal", u"Nome:", None))
@@ -1241,10 +1254,26 @@ class Ui_Principal(object):
         self.label_16.setText(QCoreApplication.translate("Principal", u"Matricula: ", None))
         self.pushButton_6.setText(QCoreApplication.translate("Principal", u"Limpar", None))
         self.btn_financeiro_pesquisar.setText(QCoreApplication.translate("Principal", u"Pesquisar", None))
-        self.pushButton_8.setText(QCoreApplication.translate("Principal", u"Buscar", None))
-        self.btn_aluno_pesquisa.setText(QCoreApplication.translate("Principal", u"Buscar", None))
-        self.label_23.setText(QCoreApplication.translate("Principal", u"Matricula", None))
-        self.label_22.setText(QCoreApplication.translate("Principal", u"Nome:", None))
+        self.pushButton_13.setText(QCoreApplication.translate("Principal", u"Salvar", None))
+        self.label_35.setText(QCoreApplication.translate("Principal", u"Dia do vencimento:", None))
+        self.label_34.setText(QCoreApplication.translate("Principal", u"Tipo de plano:", None))
+        self.comboBox_3.setItemText(0, QCoreApplication.translate("Principal", u"Selecione:", None))
+        self.comboBox_3.setItemText(1, QCoreApplication.translate("Principal", u"Diario", None))
+        self.comboBox_3.setItemText(2, QCoreApplication.translate("Principal", u"Mensal", None))
+        self.comboBox_3.setItemText(3, QCoreApplication.translate("Principal", u"Trimestral", None))
+        self.comboBox_3.setItemText(4, QCoreApplication.translate("Principal", u"Semestral", None))
+        self.comboBox_3.setItemText(5, QCoreApplication.translate("Principal", u"Anual", None))
+
+        self.comboBox.setItemText(0, QCoreApplication.translate("Principal", u"selecione:", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("Principal", u"1", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("Principal", u"5", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("Principal", u"10", None))
+        self.comboBox.setItemText(4, QCoreApplication.translate("Principal", u"15", None))
+        self.comboBox.setItemText(5, QCoreApplication.translate("Principal", u"20", None))
+        self.comboBox.setItemText(6, QCoreApplication.translate("Principal", u"25", None))
+        self.comboBox.setItemText(7, "")
+
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.pagamento_tab), QCoreApplication.translate("Principal", u"Plano", None))
         self.pushButton_12.setText(QCoreApplication.translate("Principal", u"Cancelar", None))
         self.btn_aluno_salvar.setText(QCoreApplication.translate("Principal", u"Salvar", None))
         self.label_25.setText(QCoreApplication.translate("Principal", u"Foto", None))
@@ -1252,9 +1281,10 @@ class Ui_Principal(object):
         self.pushButton_11.setText(QCoreApplication.translate("Principal", u"Escolher Foto", None))
         self.label_29.setText(QCoreApplication.translate("Principal", u"Email:", None))
         self.label_2.setText(QCoreApplication.translate("Principal", u"Matricula:", None))
-        self.comboBox_aluno_sexo.setItemText(0, QCoreApplication.translate("Principal", u"Masculino", None))
-        self.comboBox_aluno_sexo.setItemText(1, QCoreApplication.translate("Principal", u"Feminino", None))
-        self.comboBox_aluno_sexo.setItemText(2, QCoreApplication.translate("Principal", u"Outro", None))
+        self.comboBox_aluno_sexo.setItemText(0, QCoreApplication.translate("Principal", u"Selecione:", None))
+        self.comboBox_aluno_sexo.setItemText(1, QCoreApplication.translate("Principal", u"Masculino", None))
+        self.comboBox_aluno_sexo.setItemText(2, QCoreApplication.translate("Principal", u"Feminino", None))
+        self.comboBox_aluno_sexo.setItemText(3, QCoreApplication.translate("Principal", u"Outro", None))
 
         self.label_31.setText(QCoreApplication.translate("Principal", u"Numero:", None))
         self.label_36.setText(QCoreApplication.translate("Principal", u"Bairro:", None))
@@ -1266,18 +1296,10 @@ class Ui_Principal(object):
         self.label_33.setText(QCoreApplication.translate("Principal", u"Sexo:", None))
         self.label_27.setText(QCoreApplication.translate("Principal", u"CPF:", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Perfil_tab), QCoreApplication.translate("Principal", u"Perfil", None))
-        self.label_35.setText(QCoreApplication.translate("Principal", u"Dia do vencimento:", None))
-        self.label_34.setText(QCoreApplication.translate("Principal", u"Tipo de plano:", None))
-        self.comboBox_3.setItemText(0, QCoreApplication.translate("Principal", u"Selecione:", None))
-        self.comboBox_3.setItemText(1, QCoreApplication.translate("Principal", u"Diario", None))
-        self.comboBox_3.setItemText(2, QCoreApplication.translate("Principal", u"Mensal", None))
-        self.comboBox_3.setItemText(3, QCoreApplication.translate("Principal", u"Trimestral", None))
-        self.comboBox_3.setItemText(4, QCoreApplication.translate("Principal", u"Semestral", None))
-        self.comboBox_3.setItemText(5, QCoreApplication.translate("Principal", u"Anual", None))
-
-        self.dateEdit.setDisplayFormat(QCoreApplication.translate("Principal", u"dd", None))
-        self.pushButton_13.setText(QCoreApplication.translate("Principal", u"Salvar", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.pagamento_tab), QCoreApplication.translate("Principal", u"Plano", None))
+        self.pushButton_8.setText(QCoreApplication.translate("Principal", u"Buscar", None))
+        self.btn_aluno_pesquisa.setText(QCoreApplication.translate("Principal", u"Buscar", None))
+        self.label_23.setText(QCoreApplication.translate("Principal", u"Matricula", None))
+        self.label_22.setText(QCoreApplication.translate("Principal", u"Nome:", None))
         self.label_40.setText(QCoreApplication.translate("Principal", u"Configura\u00e7\u00e3o:", None))
         self.lineEdit.setText(QCoreApplication.translate("Principal", u"6,23", None))
         self.label_41.setText(QCoreApplication.translate("Principal", u"Valor da Tarifa Diaria: ", None))

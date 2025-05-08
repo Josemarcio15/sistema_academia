@@ -4,7 +4,7 @@ import mysql.connector
 DB_USER = "root"
 DB_PASSWORD = "Amagedom12"
 DB_HOST = "localhost"
-DB_NAME = "sys_db"
+DB_NAME = "sys_teste"
 
 def criar_conexao():
     """
@@ -59,7 +59,7 @@ def criar_banco_e_tabelas():
             id INT AUTO_INCREMENT PRIMARY KEY,
             nome VARCHAR(255) NOT NULL,
             cpf VARCHAR(15) UNIQUE NOT NULL,
-            sexo ENUM ('M', 'F','O'),
+            sexo ENUM ('M', 'F', 'O'),
             endereco VARCHAR(255),
             numero INT,
             bairro VARCHAR(255),
@@ -69,8 +69,9 @@ def criar_banco_e_tabelas():
             complemento TEXT,
             ativo BOOLEAN DEFAULT TRUE,
             plano ENUM('DIARIO', 'MENSAL', 'TRIMESTRAL', 'ANUAL', 'NENHUM') DEFAULT 'NENHUM',
-            data_pagamento DATE,
-            dia_pagamento ENUM('1','5','10', '15', '20','25' )
+            data_inicio_pagamento DATE,
+            dia_pagamento ENUM('1', '5', '10', '15', '20', '25'),
+            data_vencimento DATE
         )
         """)
         print("Tabela 'clientes' criada ou já existente.")
@@ -89,15 +90,48 @@ def criar_banco_e_tabelas():
 
         # Inserir dados iniciais na tabela 'taxas'
         cursor.execute("""
-        INSERT IGNORE INTO taxas (tipo, valor, data_inicio)
-        VALUES
-            ('DIARIA', 50.00, CURDATE()),
-            ('MENSAL', 200.00, CURDATE()),
-            ('TRIMESTRAL', 550.00, CURDATE()),
-            ('SEMESTRAL', 1000.00, CURDATE()),
-            ('ANUAL', 1800.00, CURDATE())
+        INSERT INTO taxas (tipo, valor, data_inicio)
+        SELECT 'DIARIA', 50.00, CURDATE() FROM DUAL
+        WHERE NOT EXISTS (SELECT 1 FROM taxas WHERE tipo = 'DIARIA');
+        """)
+        cursor.execute("""
+        INSERT INTO taxas (tipo, valor, data_inicio)
+        SELECT 'MENSAL', 200.00, CURDATE() FROM DUAL
+        WHERE NOT EXISTS (SELECT 1 FROM taxas WHERE tipo = 'MENSAL');
+        """)
+        cursor.execute("""
+        INSERT INTO taxas (tipo, valor, data_inicio)
+        SELECT 'TRIMESTRAL', 550.00, CURDATE() FROM DUAL
+        WHERE NOT EXISTS (SELECT 1 FROM taxas WHERE tipo = 'TRIMESTRAL');
+        """)
+        cursor.execute("""
+        INSERT INTO taxas (tipo, valor, data_inicio)
+        SELECT 'SEMESTRAL', 1000.00, CURDATE() FROM DUAL
+        WHERE NOT EXISTS (SELECT 1 FROM taxas WHERE tipo = 'SEMESTRAL');
+        """)
+        cursor.execute("""
+        INSERT INTO taxas (tipo, valor, data_inicio)
+        SELECT 'ANUAL', 1800.00, CURDATE() FROM DUAL
+        WHERE NOT EXISTS (SELECT 1 FROM taxas WHERE tipo = 'ANUAL');
         """)
         print("Dados iniciais inseridos na tabela 'taxas'.")
+
+        # Criação da tabela 'pagamentos'
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS pagamentos (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                cliente_id INT NOT NULL,
+                valor_pago DECIMAL(10, 2) NOT NULL,
+                data_pagamento DATE NOT NULL,
+                plano ENUM('DIARIO', 'MENSAL', 'TRIMESTRAL', 'ANUAL') NOT NULL,
+                observacoes TEXT DEFAULT NULL,
+                FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE
+            )
+        """)
+        print("Tabela 'pagamentos' criada ou já existente.")
+
+        # Commit das alterações
+        conexao.commit()
 
         # Fechar a conexão
         cursor.close()

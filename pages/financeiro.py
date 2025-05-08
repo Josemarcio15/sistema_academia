@@ -1,19 +1,24 @@
 from PySide6.QtWidgets import QLineEdit, QPushButton, QCompleter, QComboBox, QDateEdit, QLabel
 from PySide6.QtCore import QStringListModel, Qt
 from db.queries import obter_clientes_por_nome, obter_id_cliente
-
+from datetime import datetime
 class Financeiro:
     def __init__(self, widget_pagina):
         self.ui = widget_pagina
         
         #FindChild
         self.ui.findChild(QPushButton, "btn_financeiro_pesquisar").clicked.connect(self.pesquisa_aluno)
-        self.campo_pesquisa = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_cliente")
+        self.ui.findChild(QPushButton, "btn_financeiro_efetuarPagamento").clicked.connect(self.efetuar_pagamento)
+
         self.campo_pesquisa_matricula = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_id")
+        self.campo_pesquisa = self.ui.findChild(QLineEdit, "lineEdit_pesquisa_cliente")
         self.nome = self.ui.findChild(QLineEdit, "lineEdit_financeiro_nome")
         self.cpf = self.ui.findChild(QLineEdit, "lineEdit_financeiro_cpf")
         self.valor_a_pagar = self.ui.findChild(QLineEdit, "lineEdit_financeiro_valorApagar")
+
+        self.data_vencimento = self.ui.findChild(QComboBox, "comboBox_financeiro_diaVencimento")
         self.plano = self.ui.findChild(QComboBox, "comboBox_financeiro_plano")
+
         self.status = self.ui.findChild(QLabel, "label_financeiro_status")
         self.vencimento = self.ui.findChild(QDateEdit, "dateEdit_financeiro_vencimento")
 
@@ -72,16 +77,32 @@ class Financeiro:
             )
         
 
-    def mostrar_dados_aluno(self, matricula, nome, cpf, status):
+    def mostrar_dados_aluno(self, matricula, nome, cpf, ativo):
         
 
         self.campo_pesquisa_matricula.setText(str(matricula))
         self.nome.setText(nome)
         self.cpf.setText(cpf)
-        self.status.setText(str(status))
+        if ativo == 1:
+            self.status.setText("Ativo")
+        else:
+            self.status.setText("Inativo")
+
         
 
     
+    def efetuar_pagamento(self):
+        try:
+            data_hoje = datetime.now().strftime("%Y-%m-%d")
+            id_aluno = int(self.campo_pesquisa_matricula.text())
+            campos = {
+            "dia_pagamento": self.data_vencimento.currentText(),
+            "plano": self.plano.currentText(),
+            "data_pagamento": data_hoje
+            }
+            print(campos)
+        except Exception as e:
+            print(e)
 
     # def editar_aluno(self):
     #     try:
