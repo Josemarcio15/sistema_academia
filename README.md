@@ -10,5 +10,4 @@
         DB_PASSWORD = "Amagedom12"
         DB_HOST = "localhost"
         DB_NAME = "sys_db"
-###    executar script criar_db.py para criar as tabelas necessarias para
-###    o banco de dados
+###    executar script criar_db.py para criar as tabelas necessarias para o banco de dados
