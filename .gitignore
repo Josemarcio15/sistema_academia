@@ -2,5 +2,6 @@
 __pycache__/
 class_interface/__pycache__/
 PyAcademia.pyproject.*
+PyAcademia.pyproject.user*
 pages/__pycache__/
 .env
