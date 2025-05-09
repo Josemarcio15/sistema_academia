@@ -79,7 +79,6 @@ def criar_banco_e_tabelas():
         # Criação da tabela 'taxas'
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS taxas (
-            id INT AUTO_INCREMENT PRIMARY KEY,
             tipo ENUM('DIARIA', 'MENSAL', 'TRIMESTRAL', 'SEMESTRAL', 'ANUAL') NOT NULL,
             valor DECIMAL(10, 2) NOT NULL,
             data_inicio DATE NOT NULL,

@@ -1,6 +1,6 @@
-from PySide6.QtWidgets import QLineEdit, QPushButton, QCompleter, QComboBox, QDateEdit, QLabel
+from PySide6.QtWidgets import QLineEdit, QPushButton, QCompleter, QComboBox, QDateEdit, QLabel, QRadioButton
 from PySide6.QtCore import QStringListModel, Qt
-from db.queries import obter_clientes_por_nome, obter_id_cliente
+from db.queries import obter_clientes_por_nome, obter_id_cliente, obter_valor_taxa_por_tipo
 from datetime import datetime
 class Financeiro:
     def __init__(self, widget_pagina):
@@ -17,14 +17,18 @@ class Financeiro:
         self.nome = self.ui.findChild(QLineEdit, "lineEdit_financeiro_nome")
         self.cpf = self.ui.findChild(QLineEdit, "lineEdit_financeiro_cpf")
         self.valor_a_pagar = self.ui.findChild(QLineEdit, "lineEdit_financeiro_valorApagar")
+        
 
         self.data_vencimento = self.ui.findChild(QLabel, "label_financeiro_vencimento")
-        self.plano = self.ui.findChild(QComboBox, "comboBox_financeiro_plano")
-
         self.status = self.ui.findChild(QLabel, "label_financeiro_status")
 
+        self.plano = self.ui.findChild(QComboBox, "comboBox_financeiro_plano")
+
+        self.valor_normal = self.ui.findChild(QRadioButton, "radioButton_financeiro_valorNormal")
+        self.valor_desconto = self.ui.findChild(QRadioButton, "radioButton_financeiro_valorDesconto")
+
         #ativar o dateEdit
-        self.plano.currentTextChanged.connect(self.verificar_plano_diario)
+        self.plano.currentTextChanged.connect(self.verificar_plano)
 
         #autoComplete
         self.modelo_completer = QStringListModel()
@@ -35,15 +39,38 @@ class Financeiro:
 
         self.campo_pesquisa.setCompleter(self.completer)
         self.campo_pesquisa_matricula.setCompleter(self.completer)
-
+        
+        #captura de eventos
         self.campo_pesquisa.textChanged.connect(self.atualizar_sugestoes)
         self.campo_pesquisa_matricula.textChanged.connect(self.pesquisa_id)
+        
+        self.valor_normal.clicked.connect(self.chamar_valor_normal)
+        self.valor_desconto.clicked.connect(self.chamar_valor_desconto)
 
-    def verificar_plano_diario(self, combox_diario):
-        if combox_diario == "Diario":
-            self.dias_a_pagar.setEnabled(True)
+    def chamar_valor_normal(self):
+
+        if self.valor_normal.isChecked():
+            texto = obter_valor_taxa_por_tipo("DIARIA")
+            print(f" valor do texto {texto}")
+            self.valor_a_pagar.setText(str(texto))
+
+    def chamar_valor_desconto(self):
+
+        if self.valor_desconto.isChecked():
+            print("valor desconto checked")
+
+    def verificar_plano(self, combox_plano):
+        if combox_plano != "":
+            self.valor_a_pagar.setEnabled(True)
+            if combox_plano == "Diario":
+                self.dias_a_pagar.setEnabled(True)
+            else:
+                self.dias_a_pagar.setEnabled(False)
+
         else:
             self.dias_a_pagar.setEnabled(False)
+            self.valor_a_pagar.setEnabled(False)
+        
 
 
 
@@ -98,7 +125,7 @@ class Financeiro:
 
     
     def efetuar_pagamento(self):
-        pass
+        print(obter_valor_taxa_por_tipo("DIARIA"))
     #     try:
     #         data_hoje = datetime.now().strftime("%Y-%m-%d")
     #         id_aluno = int(self.campo_pesquisa_matricula.text())

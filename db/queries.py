@@ -63,7 +63,7 @@ def adicionar_cliente(nome, cpf,sexo, endereco, numero, bairro, data_nascimento,
 
 def atualizar_cliente(id_cliente, campos):
     if not campos:
-        return False  # nada a atualizar
+        return False
 
     conexao = criar_conexao()
     if conexao:
@@ -85,3 +85,43 @@ def atualizar_cliente(id_cliente, campos):
             conexao.close()
     return False
 
+def atualizar_taxas(taxas):
+    conexao = criar_conexao()
+    if conexao:
+        cursor = conexao.cursor()
+        try:
+            for taxa in taxas:
+                cursor.execute(
+                    """
+                    UPDATE taxas
+                    SET valor = %s,
+                        data_inicio = %s,
+                        data_fim = %s
+                    WHERE tipo = %s
+                    """,
+                    (taxa['valor'], taxa['data_inicio'], taxa.get('data_fim'), taxa['tipo'])
+                )
+            conexao.commit()
+            return True
+        except Exception as e:
+            print(f"Erro ao atualizar taxas: {e}")
+        finally:
+            cursor.close()
+            conexao.close()
+    return False
+
+def obter_valor_taxa_por_tipo(tipo):
+    conexao = criar_conexao()
+    if conexao:
+        try:
+            cursor = conexao.cursor(dictionary=True)
+            cursor.execute("SELECT valor FROM taxas WHERE tipo = %s", (tipo.upper(),))
+            resultado = cursor.fetchone()
+            return resultado['valor'] if resultado else None
+        except Exception as e:
+            
+            return print(f"Erro ao obter taxa do tipo '{tipo}': {e}")
+        finally:
+            cursor.close()
+            conexao.close()
+    return "nada encontrado"
