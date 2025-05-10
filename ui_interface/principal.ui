@@ -44,7 +44,7 @@
    <item row="0" column="1" rowspan="6">
     <widget class="QStackedWidget" name="stacked_principal">
      <property name="currentIndex">
-      <number>4</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page_inicio">
       <widget class="QPushButton" name="pushButton">
@@ -690,6 +690,9 @@ background-color: rgb(26, 95, 180);</string>
           <layout class="QGridLayout" name="gridLayout_21">
            <item row="0" column="4">
             <widget class="QRadioButton" name="radioButton_financeiro_valorDesconto">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Valor com Desconto</string>
              </property>
@@ -710,6 +713,9 @@ background-color: rgb(26, 95, 180);</string>
            </item>
            <item row="0" column="3">
             <widget class="QRadioButton" name="radioButton_financeiro_valorNormal">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Valor Normal</string>
              </property>

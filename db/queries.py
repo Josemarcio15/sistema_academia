@@ -11,6 +11,17 @@ def obter_clientes_por_nome(nome):
         return clientes
     return []
 
+def obter_cliente_por_nome_exato(nome):
+    conexao = criar_conexao()
+    if conexao:
+        cursor = conexao.cursor(dictionary=True)
+        cursor.execute("SELECT * FROM clientes WHERE nome = %s", (nome,))
+        cliente = cursor.fetchall()
+        cursor.close()
+        conexao.close()
+        return cliente
+    return []
+
 def obter_id_cliente(numero):
     conexao = criar_conexao()
     if conexao:

@@ -381,6 +381,7 @@ class Ui_Principal(object):
         self.gridLayout_21.setObjectName(u"gridLayout_21")
         self.radioButton_financeiro_valorDesconto = QRadioButton(self.page_financeiro)
         self.radioButton_financeiro_valorDesconto.setObjectName(u"radioButton_financeiro_valorDesconto")
+        self.radioButton_financeiro_valorDesconto.setEnabled(False)
 
         self.gridLayout_21.addWidget(self.radioButton_financeiro_valorDesconto, 0, 4, 1, 1)
 
@@ -390,6 +391,7 @@ class Ui_Principal(object):
 
         self.radioButton_financeiro_valorNormal = QRadioButton(self.page_financeiro)
         self.radioButton_financeiro_valorNormal.setObjectName(u"radioButton_financeiro_valorNormal")
+        self.radioButton_financeiro_valorNormal.setEnabled(False)
 
         self.gridLayout_21.addWidget(self.radioButton_financeiro_valorNormal, 0, 3, 1, 1)
 
@@ -1197,7 +1199,7 @@ class Ui_Principal(object):
 
         self.retranslateUi(Principal)
 
-        self.stacked_principal.setCurrentIndex(4)
+        self.stacked_principal.setCurrentIndex(2)
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.button_bar_inicio.setDefault(False)
